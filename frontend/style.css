@@ -1,4 +1,145 @@
+/* Resetar o browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+/* Resetar o browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variaveis com as cores, tamanho texto e bordar */
+:root {
+  --cor-fundo: #0025dd;
+  --cor-fundo2: #c3cdfe;
+  --cor-texto1: #ffffff;
+}
+
+/* Configurações do corpo do site */
 body {
-    background-color: #0A1C33;
+  background-color: var(--cor-fundo2);
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Retirando o decoration */
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+/* Imagem logo */
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Header background */
+.header-bg {
+  background-color: var(--cor-fundo);
+}
+
+/* Header navegação*/
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Header menu */
+.header-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.header-menu a {
+  display: inline-block;
+  color: var(--cor-texto1);
+  padding: 16px 0;
+  font-size: 18px;
+  position: relative;
+}
+
+.header-menu a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0px;
+  background-color: var(--cor-texto1);
+  margin-top: 4px;
+  position: absolute;
+  transition: 0.5s;
+}
+
+.header-menu a:hover::after {
+  width: 100%;
+}
+
+/* Botão Inicio */
+.home {
+  display: inline-block;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto1);
+  padding: 8px 12px;
+  margin: 4px;
+  border-radius: 4px;
+}
+
+/* Header imagem */
+.header img {
+  display: block;
+  height: 40px;
+  width: auto;
+}
+
+.produtos img {
+    width: 300px;
+    height: 300px;
+}
+
+.fundo {
+    background-color: white;
+    display: inline-block;
+    padding: 20px;
+}
+
+.processador {
+    background-color: #CCE2FF;
+    display: inline-block;
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
     
+}
+
+.descricao {
+    color: white;
+    font-size: 15px;
+    margin-top: 10px;
+    
+}
+
+.desconto {
+    text-decoration: line-through;
+}
+
+.preço {
+    color: rgb(74, 253, 74);
+    font-size: 40px;
+    margin-top: 10px;
 }
