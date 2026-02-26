@@ -20,8 +20,7 @@ def criar_produto(nome, preco, quantidade):
 
     # Salva o produto no txt
     with open("dados.txt", "a") as arquivo:
-        arquivo.write(f"{id_novo},{nome},{preco},{quantidade}\n")
+        arquivo.write(f"{id_novo}|{nome}|{preco}|{quantidade}\n")
 
     print(f"Produto '{nome}' criado!")
 
-criar_produto("Camisa", 29.99, 10)
