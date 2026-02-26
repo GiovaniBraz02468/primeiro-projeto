@@ -1,3 +1,5 @@
+from datetime import datetime
+
 def criar_produto(nome, preco, quantidade):
 
 # Cria um novo produto e salva no dados.txt
@@ -13,16 +15,13 @@ def criar_produto(nome, preco, quantidade):
         print("A quantidade não pode ser negativa.")
         return
     
-    # Pega o ID baseado em quantos produtos existem.
-    try:
-        with open("dados.txt", "r") as arquivo:
-            linhas = arquivo.readlines()
-            id_novo = len(linhas) + 1
-    except FileNotFoundError:
-        id_novo = 1
+    # Gera o ID baseado na data e hora atual
+    id_novo = datetime.now().strftime("%Y%m%d%H%M%S")
 
     # Salva o produto no txt
     with open("dados.txt", "a") as arquivo:
         arquivo.write(f"{id_novo},{nome},{preco},{quantidade}\n")
 
     print(f"Produto '{nome}' criado!")
+
+criar_produto("Camisa", 29.99, 10)
