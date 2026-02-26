@@ -14,16 +14,20 @@
 
 /* Variaveis com as cores, tamanho texto e bordar */
 :root {
-  --cor-fundo: #0025dd;
-  --cor-fundo2: #c3cdfe;
   --cor-texto1: #ffffff;
 }
 
 /* Configurações do corpo do site */
 body {
-  background-color: var(--cor-fundo2);
+  background: linear-gradient(135deg, #c3cdfe, #e0e7ff);
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navegação */
+nav {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Retirando o decoration */
@@ -40,23 +44,55 @@ img {
   max-width: 100%;
 }
 
-/* Header background */
-.header-bg {
-  background-color: var(--cor-fundo);
-}
-
 /* Header navegação*/
 .header {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
-  padding: 20px;
+  padding: 8px 20px;
+  margin: 0 auto;
   box-sizing: border-box;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* Header background */
+.header-bg {
+  border-radius: 16px;
+  max-width: 1240px;
+  margin: 20px auto;
+}
+
+.header-bg {
+  background: linear-gradient(135deg, #60a5fa, #0b3c78, #60a5fa);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.header-menu a,
+.logo-text {
+  color: var(--cor-texto1);
+}
+
+/* Alterar o tamanho da logo */
+.header-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.header-logo img {
+  height: 36px;
+  width: auto;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--cor-texto1);
+  line-height: 1;
 }
 
 /* Header menu */
@@ -97,19 +133,6 @@ img {
   padding: 8px 12px;
   margin: 4px;
   border-radius: 4px;
-}
-
-/* Header imagem */
-.header img {
-  display: block;
-  height: auto;
-  width: auto;
-}
-
-/* Alterar o tamanho da logo */
-.logo {
-  max-height: 60px;
-  width: auto;
 }
 
 /* Produtos */
