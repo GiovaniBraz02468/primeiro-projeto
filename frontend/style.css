@@ -5,7 +5,6 @@
   box-sizing: border-box;
 }
 
-
 /* Resetar o browser */
 * {
   padding: 0;
@@ -103,65 +102,69 @@ img {
 /* Header imagem */
 .header img {
   display: block;
-  height: 80px;
+  height: auto;
+  width: auto;
+}
+
+/* Alterar o tamanho da logo */
+.logo {
+  max-height: 60px;
   width: auto;
 }
 
 /* Produtos */
 .produtos img {
-    width: 300px;
-    height: 300px;
-    background-color: white;
-    justify-content: center; /* centraliza */
-    gap: 30px; /* espaço entre produtos */
-    flex-wrap: wrap; /* quebra linha se não couber */
-    margin-top: 30px;
+  width: 300px;
+  height: 300px;
+  background-color: white;
+  justify-content: center; /* centraliza */
+  gap: 30px; /* espaço entre produtos */
+  flex-wrap: wrap; /* quebra linha se não couber */
+  margin-top: 30px;
 }
 
 .produtos {
-    display: flex;
-    justify-content: center; /* centraliza */
-    gap: 30px; /* espaço entre produtos */
-    flex-wrap: wrap; /* quebra linha se não couber */
-    margin-top: 40px;
+  display: flex;
+  justify-content: center; /* centraliza */
+  gap: 30px; /* espaço entre produtos */
+  flex-wrap: wrap; /* quebra linha se não couber */
+  margin-top: 40px;
 }
 
 .fundo {
-    background-color: rgb(207, 230, 230);
-    display: block;
-    padding: 20px;
-    width: 300px;
-    border-radius: 12px;
-    box-shadow: 0 8px 8px #7c8097;
-    
+  background-color: rgb(207, 230, 230);
+  display: block;
+  padding: 20px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 8px 8px #7c8097;
 }
 
 .descricao {
-    color: rgb(73, 46, 46);
-    font-size: 15px;
-    margin-top: 10px;
-    text-align: center;
-    
+  color: rgb(73, 46, 46);
+  font-size: 15px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .desconto {
-    text-decoration: line-through;
-    text-align: center;
+  text-decoration: line-through;
+  text-align: center;
 }
 
 .preço {
-    color: rgb(74, 253, 74);
-    font-size: 40px;
-    margin-top: 10px;
-    text-align: center;
+  color: rgb(74, 253, 74);
+  font-size: 40px;
+  margin-top: 10px;
+  text-align: center;
 }
 
 .compra {
-    display: block;
-    background-color: rgb(74, 253, 74);
-    color: var(--cor-texto1);
-    padding: 8px 12px;
-    margin: 10px auto; /* isso centraliza */
-    border-radius: 4px;
-    width: fit-content;
+  display: block;
+  background-color: rgb(74, 253, 74);
+  color: var(--cor-texto1);
+  padding: 8px 12px;
+  margin: 10px auto; /* isso centraliza */
+  border-radius: 4px;
+  width: fit-content;
 }
