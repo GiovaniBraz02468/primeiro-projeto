@@ -191,3 +191,59 @@ img {
   border-radius: 4px;
   width: fit-content;
 }
+.dados {
+  position: absolute;
+  top: 260px;
+  left: px;
+  
+}
+
+.atencao {
+  position: absolute;
+  top: 325px;
+  left: px;
+  color: blue;
+}
+
+.Oque {
+  position: absolute;
+  top: 150px;
+  left: px;
+}
+
+.Horarios {
+  position: absolute;
+  top: 370px;
+  left: px;
+
+}
+
+.integrantes {
+  position: absolute;
+  top: 420px;
+  left: px;
+}
+
+.imagem {
+  max-width: 350px;
+  margin-left: 800px;
+  /* move para direita */
+  margin-top: -270px;
+  display: block;
+}
+
+.botao {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.botao:hover {
+  background-color: #0056b3;
+
+}
+
+
