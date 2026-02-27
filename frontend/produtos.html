@@ -5,16 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produtos</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header class="header-bg">
-    <div class="header">
+    <header class="header-bg">
 
+    <div class="header">
       <!-- Logo -->
-      
-        <img src="produtos-img/logo.png" alt="Nome da empresa">
-      
+
+      <div class="header-logo">
+        <img src="./img-logo/logo1.png" alt="Inova Tech">
+        <span class="logo-text">InovaTech</span>
+      </div>
 
       <!-- Acessibilidade -->
       <nav aria-label="primaria">
@@ -30,7 +33,13 @@
     </div>
   </header>
     
-  
+  <div class="btcompra" >
+    <img src="produtos-img/carrinho.png" alt="carrinho" class="carrinho">
+    <a href="produtos2.html"><p class="bt-compra" onclick="PointerEvent"><b>Carrinho</b></p></a>
+  </div>
+
+    <input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar produtos..." class="pesquisa">
+
     <div class="produtos">
       <div class="fundo">
           <img src="produtos-img/processador.png" alt="processador">
@@ -155,5 +164,5 @@
   </header>
 
 </body>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="produtos.css">
 </html>
