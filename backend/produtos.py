@@ -4,19 +4,34 @@ arquivo = 'dados.txt'
 
 
 def ler_dados():
-    pass
+    # Lê o arquivo e se não existir retorna lista vazia
+    try:
+        with open(arquivo, "r", encoding="utf-8") as f:
+            linhas = f.readlines()
+            produtos = []
+            for linha in linhas:
+                partes = linha.strip().split(";")
+                produtos.append({
+                    "id": partes[0],
+                    "nome": partes[1],
+                    "preco": float(partes[2]),
+                    "quantidade": int(partes[3])
+                })
+                return produtos
+    except FileNotFoundError:
+        return[]
 
-def salvar_dados():
-    with open(arquivo, 'w', encoding='utf-8') as arquivo:
+def salvar_dados(listar_produtos):
+    with open(arquivo, 'w', encoding='utf-8') as f:
         for produto in listar_produtos:
-            linha = f'{produto['id']}, {produto['nome']}, {produto['preco']}, {produto['quantidade']} \n'
-            arquivo.write(linha)
+            linha = f"{produto['id']}; {produto['nome']}; {produto['preco']}; {produto['quantidade']} \n"
+            f.write(linha)
 
 
 def criar_produto(nome, preco, quantidade):
 
-# Cria um novo produto e salva no dados.txt
-# Recebe nome, preco e quantidade do produto.
+    # Cria um novo produto e salva no dados.txt
+    # Recebe nome, preco e quantidade do produto.
 
     if nome == "":
         print("Nome não pode estar vazio.")
@@ -27,13 +42,14 @@ def criar_produto(nome, preco, quantidade):
     if quantidade < 0:
         print("A quantidade não pode ser negativa.")
         return
-    
+    # Limpar espaço acidental
+    nome = nome.strip()
     # Gera o ID baseado na data e hora atual
     id_novo = datetime.now().strftime("%Y%m%d%H%M%S")
 
     # Salva o produto no txt
     with open("dados.txt", "a") as arquivo:
-        arquivo.write(f"{id_novo}|{nome}|{preco}|{quantidade}\n")
+        arquivo.write(f"{id_novo};{nome};{preco};{quantidade}\n")
 
     print(f"Produto '{nome}' criado!")
 
