@@ -30,14 +30,15 @@ def main():
                 print('Preço e quantidade devem ser números!')
                 continue
 
-        # função criar(nome, preco, quantidade)
+            criar_produto(nome, preco, quantidade)
+
+
         elif opcao == 2:
-            #função listar produtos()
-            pass
+            listar_produtos()
 
         elif opcao == 3:
             try:
-                id = int(input('ID do produto: '))
+                id = input('ID do produto: ')
                 nome = str(input('Novo nome: '))
                 preco = float(input('Novo preço: '))
                 quantidade = int(input('Nova quantidade: '))
@@ -45,16 +46,16 @@ def main():
                 print('Valor inválido!')
                 continue
 
-        #função atualizar o produto(id, nome, preco, quantidade)
+            atualizar_produto(id, nome, preco, quantidade)
 
         elif opcao == 4:
             try:
-                id = int(input('Digite o ID do produto a ser removido: '))
+                id = input('Digite o ID do produto a ser removido: ')
             except ValueError:
                 print('ID invalido')
                 continue
 
-        #função deletar produto(id)
+            deletar_produto(id)
 
         elif opcao == 5:
             print('Volte sempre!')

@@ -1,4 +1,17 @@
 from datetime import datetime
+import os
+arquivo = 'dados.txt'
+
+
+def ler_dados():
+    pass
+
+def salvar_dados():
+    with open(arquivo, 'w', encoding='utf-8') as arquivo:
+        for produto in listar_produtos:
+            linha = f'{produto['id']}, {produto['nome']}, {produto['preco']}, {produto['quantidade']} \n'
+            arquivo.write(linha)
+
 
 def criar_produto(nome, preco, quantidade):
 
@@ -24,3 +37,45 @@ def criar_produto(nome, preco, quantidade):
 
     print(f"Produto '{nome}' criado!")
 
+def listar_produtos():
+    pass
+
+def buscar_produto_por_id(id):
+    pass
+
+def atualizar_produto(id, novo_nome, novo_preco, nova_quantidade):
+    produtos = ler_dados()
+    produto_encontrado = False
+
+    for produto in produtos:
+        if produto['id'] ==  id:
+            
+            if novo_nome.strip() == '':
+                print('Nome inválido!')
+                return
+
+            if novo_preco <= 0:
+                print('Preço inválido!')
+                return
+            
+            if nova_quantidade < 0:
+                print('Quantidade inválida')
+                return
+            
+            produto['nome'] = novo_nome
+            produto['preco'] = novo_preco
+            produto['quantidade'] = nova_quantidade
+
+            produto_encontrado = True
+            break
+
+        if not produto_encontrado:
+            print('Produto não encontrado!')
+            return
+        
+        salvar_dados(produtos)
+        print('Produto atualizado com sucesso!')
+
+
+def deletar_produto(id):
+    pass
