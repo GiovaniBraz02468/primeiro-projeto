@@ -1,0 +1,10 @@
+.banner-contato {
+  background: linear-gradient(to right, #0d6efd, #00bfff);
+  padding: 60px 0;
+  text-align: center;
+}
+
+.info-contato {
+  background: white;
+  padding: 40px;
+}
