@@ -18,13 +18,12 @@ def main():
             print('Digite apenas números!')
             continue
 
-        
         if opcao == 1:
             nome = input('Nome do produto: ').strip()
             try:
                 preco = float(input('Preço: '))
                 quantidade = int(input('Quantidade: '))
-                criar_produto(nome, preco, quantidade)  
+                criar_produto(nome, preco, quantidade) 
             except ValueError:
                 print('Preço e quantidade devem ser números!')
                 continue
@@ -38,7 +37,7 @@ def main():
                 nome = input('Novo nome: ').strip()
                 preco = float(input('Novo preço: '))
                 quantidade = int(input('Nova quantidade: '))
-                atualizar_produto(id_produto, nome, preco, quantidade)  #
+                atualizar_produto(id_produto, nome, preco, quantidade)  
             except ValueError:
                 print('Valor inválido!')
                 continue

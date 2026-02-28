@@ -21,7 +21,6 @@ def ler_dados():
         return []
 
 def salvar_dados(listar_produtos):
-    
     with open(arquivo, 'w', encoding='utf-8') as f:
         for produto in listar_produtos:
             linha = f"{produto['id']};{produto['nome']};{produto['preco']};{produto['quantidade']}\n"
@@ -41,14 +40,12 @@ def criar_produto(nome, preco, quantidade):
     nome = nome.strip()
     id_novo = datetime.now().strftime("%Y%m%d%H%M%S")
     
-    
     with open(arquivo, "a", encoding="utf-8") as f:
         f.write(f"{id_novo};{nome};{preco};{quantidade}\n")
     
     print(f"Produto '{nome}' criado!")
 
 def listar_produtos():
-    
     produtos = ler_dados()
     if not produtos:
         print("Nenhum produto cadastrado.")
@@ -59,7 +56,6 @@ def listar_produtos():
         print(f"ID: {p['id']} | {p['nome']} | R$ {p['preco']:.2f} | Qtd: {p['quantidade']}")
 
 def buscar_produto_por_id(id):
-    
     produtos = ler_dados()
     for produto in produtos:
         if produto['id'] == id:
@@ -69,7 +65,6 @@ def buscar_produto_por_id(id):
     return None
 
 def atualizar_produto(id, novo_nome, novo_preco, nova_quantidade):
-    
     produtos = ler_dados()
     produto_encontrado = False
     
