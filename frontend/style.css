@@ -191,12 +191,92 @@ img {
   border-radius: 4px;
   width: fit-content;
 }
-.contato {
-  background-color: rgb(17, 0, 255);
+
+.dadoscad {
+  position: absolute;
+  top: 250px;
+  left: px;
+  
+}
+
+.atencao {
+  position: absolute;
+  top: 325px;
+  left: px;
+  color: blue;
+}
+
+.Oque {
+  position: absolute;
+  top: 130px;
+  left: px;
+}
+
+.Horarios {
+  position: absolute;
+  top: 370px;
+  left: px;
+
+}
+
+.integrantes {
+  position: absolute;
+  top: 420px;
+  left: px;
+}
+
+.imagem {
+  max-width: 350px;
+  margin-left: 800px;
+  /* move para direita */
+  margin-top: -270px;
   display: block;
-  padding: 20px;
-  width: 200px;
-  border-radius: 12px;
+}
+
+.botao {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
+}
+
+.botao:hover {
+  background-color: #0056b3;
+
+}
+
+
+
+.contato {
+  background: linear-gradient(135deg, #0e1eff, #00aeff);
+  display: block;
+  padding: 40px;
+  width: 500px;
+  border-radius: 15px;
   box-shadow: 0 8px 8px #7c8097;
-  margin: 50px auto; /* centraliza */
+  margin: 60px auto; /* centraliza */
+}
+.contato h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.contato input,
+.contato textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+.contato button {
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.contato {
+  width: 90%;
+  max-width: 600px;
+  padding: 40px;
+  margin: 60px auto;
 }
