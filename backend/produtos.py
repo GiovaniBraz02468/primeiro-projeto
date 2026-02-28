@@ -1,5 +1,5 @@
 from datetime import datetime
-import os
+
 arquivo = 'dados.txt'
 
 def ler_dados():

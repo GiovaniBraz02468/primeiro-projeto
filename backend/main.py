@@ -43,12 +43,13 @@ def main():
                 continue
 
         elif opcao == 4:
-            try:
-                id_produto = input('Digite o ID do produto a ser removido: ').strip()  
-                deletar_produto(id_produto)  
-            except ValueError:
-                print('ID inválido!')
+            id_produto = input('Digite o ID do produto a ser removido: ').strip()
+    
+            if id_produto == "":
+                print("ID não pode estar vazio!")
                 continue
+        
+            deletar_produto(id_produto)
 
         elif opcao == 5:
             print('Volte sempre!')
