@@ -94,4 +94,20 @@ def atualizar_produto(id, novo_nome, novo_preco, nova_quantidade):
 
 
 def deletar_produto(id):
-    pass
+    produtos = ler_dados()
+    nova_lista = []
+    produto_encontrado = False
+
+    for produto in produtos:
+        if produto['id'] == id:
+            produto_encontrado = True
+        else:
+            nova_lista.append(produto)
+
+    if not produto_encontrado:
+        print('Produto não encontrado!')
+        return
+    
+    salvar_dados(nova_lista)
+    print('Produto removido com sucesso!')
+        
