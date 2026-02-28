@@ -1,61 +1,55 @@
 from produtos import *
 
-# MENU E CONTROLE DO SISTEMA
-
 def mostrar_menu():
-    print('\n ===== SISTEMA DE PRODUTOS =====')
+    print('\n===== SISTEMA DE PRODUTOS =====')
     print('1 - Criar produto')
-    print('2 - Listar produto')
+    print('2 - Listar produtos')
     print('3 - Atualizar produto')
     print('4 - Deletar produto')
     print('5 - Sair')
 
 def main():
-
     while True:
         mostrar_menu()
-
+        
         try:
             opcao = int(input('Escolha uma opção: '))
         except ValueError:
             print('Digite apenas números!')
             continue
 
+        
         if opcao == 1:
-            nome =  input('Nome do produto: ')
+            nome = input('Nome do produto: ').strip()
             try:
                 preco = float(input('Preço: '))
                 quantidade = int(input('Quantidade: '))
+                criar_produto(nome, preco, quantidade)  
             except ValueError:
                 print('Preço e quantidade devem ser números!')
                 continue
 
-            criar_produto(nome, preco, quantidade)
-
-
         elif opcao == 2:
-            listar_produtos()
+            listar_produtos()  
 
         elif opcao == 3:
             try:
-                id = input('ID do produto: ')
-                nome = str(input('Novo nome: '))
+                id_produto = input('ID do produto: ').strip()  
+                nome = input('Novo nome: ').strip()
                 preco = float(input('Novo preço: '))
                 quantidade = int(input('Nova quantidade: '))
+                atualizar_produto(id_produto, nome, preco, quantidade)  #
             except ValueError:
                 print('Valor inválido!')
                 continue
 
-            atualizar_produto(id, nome, preco, quantidade)
-
         elif opcao == 4:
             try:
-                id = input('Digite o ID do produto a ser removido: ')
+                id_produto = input('Digite o ID do produto a ser removido: ').strip()  
+                deletar_produto(id_produto)  
             except ValueError:
-                print('ID invalido')
+                print('ID inválido!')
                 continue
-
-            deletar_produto(id)
 
         elif opcao == 5:
             print('Volte sempre!')
@@ -63,7 +57,7 @@ def main():
             break
 
         else:
-            print('Ops... Opção inválida. Tente novamente')
+            print('Opção inválida. Tente novamente.')
 
-
-main()
+if __name__ == "__main__":
+    main()
