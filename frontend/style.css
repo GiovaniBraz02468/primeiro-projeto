@@ -402,3 +402,53 @@ h15 {
   padding: 40px;
   margin: 60px auto;
 }
+
+/* Responsivo */
+@media (max-width: 1024px){
+  .produtos{
+    grid-template-columns: repeat(2,1fr);
+  }
+  .header{
+    justify-content: space-between;
+  }
+}
+
+
+@media (max-width: 768px){
+  .header{
+    flex-direction: column;
+    gap: 16px;
+  }
+  .header-menu{
+    justify-content: center;
+    gap: 24px;
+  }
+  .intro h1{
+    font-size: 36px;
+  }
+  .intro p{
+    font-size: 18px;
+  }
+  .produtos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+  .beneficios-box{
+    padding: 24px;
+  }
+}
+
+@media (max-width: 480px){
+  .intro h1{
+    font-size: 28px;
+  }
+  .intro h2{
+    font-size: 22px;
+  }
+  .logo-text {
+    font-size: 16px;
+  }
+  .header-menu a{
+    font-size: 16px;
+  }
+}
