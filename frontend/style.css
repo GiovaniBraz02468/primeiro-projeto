@@ -15,6 +15,7 @@ body {
   background: linear-gradient(135deg, #c3cdfe, #e0e7ff);
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 /* Navegação */
@@ -317,42 +318,35 @@ img {
 }
 
 .dadoscad {
-  position: absolute;
-  top: 250px;
-  left: px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .atencao {
-  position: absolute;
-  top: 325px;
-  left: px;
+  margin-top: 06px;
   color: blue;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Oque {
-  position: absolute;
-  top: 130px;
-  left: px;
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .Horarios {
-  position: absolute;
-  top: 370px;
-  left: px;
+ margin-top: 05px;
+ font-family: Arial, Helvetica, sans-serif;
 }
 
 .integrantes {
-  position: absolute;
-  top: 420px;
-  left: px;
+ margin-top: 10px;
+ font-family: Arial, Helvetica, sans-serif;
 }
 
 .imagem {
   max-width: 350px;
-  margin-left: 800px;
-  /* move para direita */
-  margin-top: -270px;
-  display: block;
+    margin-left: 900px;  
+    margin-top: -225px;
 }
 
 .botao {
