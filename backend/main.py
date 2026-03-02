@@ -19,30 +19,74 @@ def main():
             continue
 
         if opcao == 1:
-            nome = input('Nome do produto: ').strip()
-            try:
-                preco = float(input('Preço: '))
-                quantidade = int(input('Quantidade: '))
-                criar_produto(nome, preco, quantidade) 
-            except ValueError:
-                print('Preço e quantidade devem ser números!')
+            print('\n    CRIAR PRODUTO   ')
+            nome = input('Digite o nome: ').strip()
+
+            if nome == "":
+                print('Nome invalido')
                 continue
+            
+            #preço
+            while True:
+                try:
+                    preco = float(input('Preço: '))
+                    if preco <= 0:
+                        print('Preço deve ser maior que 0!')
+                        continue
+                    break
+                except ValueError:
+                    print('Valor inválido no preço!')
+
+            #quantidade
+            while True:
+                try:
+                    quantidade = int(input('Quantidade: '))
+                    if quantidade < 0:
+                        print('Quantidade não pode ser negativa!')
+                        continue
+                    break
+                except ValueError:
+                    print('Valor inválido na quantidade!')
+
+            criar_produto(nome, preco, quantidade)
+
+
 
         elif opcao == 2:
             listar_produtos()  
 
         elif opcao == 3:
-            try:
-                id_produto = input('ID do produto: ').strip()  
-                nome = input('Novo nome: ').strip()
-                preco = float(input('Novo preço: '))
-                quantidade = int(input('Nova quantidade: '))
-                atualizar_produto(id_produto, nome, preco, quantidade)  
-            except ValueError:
-                print('Valor inválido!')
-                continue
+            print('\n   ATUALIZAR PRODUTO   ')
+            id_produto = input('ID do produto: ').strip()  
+            nome = input('Novo nome: ').strip()
+
+            
+            while True:
+                try:
+                    preco = float(input('Novo preço: '))
+                    if preco <= 0:
+                        print('Preço deve ser maior que 0!')
+                        continue
+                    break
+                except ValueError:
+                    print('Valor inválido no preço!')
+
+            #quantidade
+            while True:
+                try:
+                    quantidade = int(input('Nova quantidade: '))
+                    if quantidade < 0:
+                        print('Quantidade não pode ser negativa!')
+                        continue
+                    break
+                except ValueError:
+                    print('Valor inválido na quantidade!')
+
+            atualizar_produto(id_produto, nome, preco, quantidade)
+
 
         elif opcao == 4:
+            print('\n   REMOVER PRODUTO   ')
             id_produto = input('Digite o ID do produto a ser removido: ').strip()
     
             if id_produto == "":
