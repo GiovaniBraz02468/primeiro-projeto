@@ -50,7 +50,6 @@ def main():
 
             # Criar produto com status ATIVO por padrão (True)
             criar_produto(nome, preco, quantidade, True)
-            print('Produto criado com sucesso! Status: ATIVO')
 
         elif opcao == 2:
             listar_produtos()  
@@ -62,7 +61,7 @@ def main():
             if id_produto == "":
                 print("ID não pode estar vazio!")
                 continue
-                
+              
             nome = input('Novo nome: ').strip()
             
             while True:
@@ -106,13 +105,11 @@ def main():
                     print('Digite apenas números!')
             
             atualizar_produto(id_produto, nome, preco, quantidade, status)
-            status_texto = "ATIVO" if status else "INATIVO"
-            print(f'Produto atualizado! Status: {status_texto}')
 
         elif opcao == 4:
             print('\n   GERENCIAR PRODUTO   ')
             id_produto = input('Digite o ID do produto: ').strip()
-    
+
             if id_produto == "":
                 print("ID não pode estar vazio!")
                 continue
@@ -132,17 +129,13 @@ def main():
                     escolha = int(input('Escolha (1, 2 ou 3): '))
                     
                     if escolha == 1:
-                        # Desativar produto (status = False)
                         desativar_produto(id_produto)
-                        print('Produto desativado com sucesso!')
                         break
                         
                     elif escolha == 2:
-                        # Deletar permanentemente
                         confirmacao = input('TEM CERTEZA? Digite "SIM" para confirmar: ').strip().upper()
                         if confirmacao == "SIM":
                             deletar_produto(id_produto)
-                            print('Produto deletado permanentemente!')
                         else:
                             print('Operação cancelada!')
                         break
