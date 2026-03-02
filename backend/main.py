@@ -48,18 +48,22 @@ def main():
                 except ValueError:
                     print('Valor inválido na quantidade!')
 
-            criar_produto(nome, preco, quantidade)
-
-
+            # Criar produto com status ATIVO por padrão (True)
+            criar_produto(nome, preco, quantidade, True)
+            print('Produto criado com sucesso! Status: ATIVO')
 
         elif opcao == 2:
             listar_produtos()  
 
         elif opcao == 3:
             print('\n   ATUALIZAR PRODUTO   ')
-            id_produto = input('ID do produto: ').strip()  
+            id_produto = input('ID do produto: ').strip()
+            
+            if id_produto == "":
+                print("ID não pode estar vazio!")
+                continue
+                
             nome = input('Novo nome: ').strip()
-
             
             while True:
                 try:
@@ -71,7 +75,6 @@ def main():
                 except ValueError:
                     print('Valor inválido no preço!')
 
-            #quantidade
             while True:
                 try:
                     quantidade = int(input('Nova quantidade: '))
@@ -82,18 +85,77 @@ def main():
                 except ValueError:
                     print('Valor inválido na quantidade!')
 
-            atualizar_produto(id_produto, nome, preco, quantidade)
-
+            # Perguntar sobre status após validação
+            print('\nStatus atual do produto será mantido.')
+            print('Deseja manter o produto ATIVO ou DESATIVAR?')
+            print('1 - Manter ATIVO')
+            print('2 - Desativar')
+            
+            while True:
+                try:
+                    escolha_status = int(input('Escolha (1 ou 2): '))
+                    if escolha_status == 1:
+                        status = True
+                        break
+                    elif escolha_status == 2:
+                        status = False
+                        break
+                    else:
+                        print('Digite apenas 1 ou 2!')
+                except ValueError:
+                    print('Digite apenas números!')
+            
+            atualizar_produto(id_produto, nome, preco, quantidade, status)
+            status_texto = "ATIVO" if status else "INATIVO"
+            print(f'Produto atualizado! Status: {status_texto}')
 
         elif opcao == 4:
-            print('\n   REMOVER PRODUTO   ')
-            id_produto = input('Digite o ID do produto a ser removido: ').strip()
+            print('\n   GERENCIAR PRODUTO   ')
+            id_produto = input('Digite o ID do produto: ').strip()
     
             if id_produto == "":
                 print("ID não pode estar vazio!")
                 continue
-        
-            deletar_produto(id_produto)
+            
+            # Confirmar se produto existe antes das opções
+            if not produto_existe(id_produto):
+                print("Produto não encontrado!")
+                continue
+            
+            print('\nO que deseja fazer com este produto?')
+            print('1 - Desativar (soft delete)')
+            print('2 - Deletar permanentemente')
+            print('3 - Voltar ao menu principal')
+            
+            while True:
+                try:
+                    escolha = int(input('Escolha (1, 2 ou 3): '))
+                    
+                    if escolha == 1:
+                        # Desativar produto (status = False)
+                        desativar_produto(id_produto)
+                        print('Produto desativado com sucesso!')
+                        break
+                        
+                    elif escolha == 2:
+                        # Deletar permanentemente
+                        confirmacao = input('TEM CERTEZA? Digite "SIM" para confirmar: ').strip().upper()
+                        if confirmacao == "SIM":
+                            deletar_produto(id_produto)
+                            print('Produto deletado permanentemente!')
+                        else:
+                            print('Operação cancelada!')
+                        break
+                        
+                    elif escolha == 3:
+                        print('Voltando ao menu principal...')
+                        break
+                    
+                    else:
+                        print('Opção inválida! Digite 1, 2 ou 3.')
+                        
+                except ValueError:
+                    print('Digite apenas números!')
 
         elif opcao == 5:
             print('Volte sempre!')
