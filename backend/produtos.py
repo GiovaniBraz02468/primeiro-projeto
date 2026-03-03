@@ -2,7 +2,7 @@ from datetime import datetime
 import os
 
 arquivo = 'dados.txt'
-
+# função para ler os dados do arquivo 'dados.txt' e retornar uma lista de produtos.
 def ler_dados():
     try:
         with open(arquivo, "r", encoding="utf-8") as f:
@@ -21,7 +21,7 @@ def ler_dados():
             return produtos  
     except FileNotFoundError:
         return []
-
+# função para salvar a lista de produtos atualizar de volta no arquivo 'dados.txt'
 def salvar_dados(listar_produtos):
     with open(arquivo, 'w', encoding='utf-8') as f:
         for produto in listar_produtos:
@@ -29,7 +29,7 @@ def salvar_dados(listar_produtos):
             linha = f"{produto['id']};{produto['nome']};{produto['preco']};{produto['quantidade']};{status_str}\n"
             f.write(linha)
 
-# ->  Verifica se produto existe
+# função que verifica se um produto com o 'id_produto' especificado já existe na base de dados.
 def produto_existe(id_produto):
     produtos = ler_dados()
     for produto in produtos:
@@ -37,7 +37,7 @@ def produto_existe(id_produto):
             return True
     return False
 
-# -> Desativa produto (status = False)
+# função para alterar o status de um produto especificado para 'false', desativando-o logicamente.
 def desativar_produto(id_produto):
     produtos = ler_dados()
     produto_encontrado = False
@@ -55,8 +55,8 @@ def desativar_produto(id_produto):
     salvar_dados(produtos)
     print('Produto desativado com sucesso!')
     return True
-
-def criar_produto(nome, preco, quantidade, status=True):  # Agora aceita status
+# função para criar um novo registro de produto com os detalhes fornecidos e um status inicial opcional.
+def criar_produto(nome, preco, quantidade, status=True): 
     if nome.strip() == "":  
         print("Nome não pode estar vazio.")
         return
@@ -76,7 +76,7 @@ def criar_produto(nome, preco, quantidade, status=True):  # Agora aceita status
     
     status_texto = "ATIVO" if status else "INATIVO"
     print(f"Produto '{nome}' criado! Status: {status_texto}")
-
+# função para recuperar e exibir (ou retornar) a lista completa de produtos ativos ou todos os produtos.
 def listar_produtos():
     produtos = ler_dados()
     if not produtos:
@@ -87,7 +87,7 @@ def listar_produtos():
     for p in produtos:
         status_texto = "ATIVO" if p['status'] else "INATIVO"
         print(f"[{p['id']}] {p['nome']} | R$ {p['preco']:.2f} | Qtd: {p['quantidade']} | {status_texto}")
-
+# função para encontrar e retornar um produto espeífico com base em seu identificador único("id").
 def buscar_produto_por_id(id):
     produtos = ler_dados()
     for produto in produtos:
@@ -97,8 +97,8 @@ def buscar_produto_por_id(id):
             return produto
     print("Produto não encontrado!")
     return None
-
-def atualizar_produto(id_produto, novo_nome, novo_preco, nova_quantidade, status):  # Agora aceita status
+# função para modificar os detalhes(nome, preço, quantidade) de um produto existente identificado pelo 'id_produto'.
+def atualizar_produto(id_produto, novo_nome, novo_preco, nova_quantidade, status):
     produtos = ler_dados()
     produto_encontrado = False
     
@@ -128,13 +128,13 @@ def atualizar_produto(id_produto, novo_nome, novo_preco, nova_quantidade, status
     salvar_dados(produtos)  
     status_texto = "ATIVO" if status else "INATIVO"
     print(f'Produto atualizado! Status: {status_texto}')
-
+# função que verifica se há pelo menos um produto registrado na base de dados.
 def tem_produto():
     if not os.path.exists(arquivo):
         return False
     produtos = ler_dados()
     return len(produtos) > 0    
-
+# função para remover permanentemente um produto da lista com base em seu identificador ('id')
 def deletar_produto(id):
     if not tem_produto():
         print("Não tem produtos cadastrados.")
@@ -155,7 +155,7 @@ def deletar_produto(id):
     
     salvar_dados(nova_lista)
     print('Produto deletado permanentemente!')
-
+# função para compilar e gerar um relatório formatado com base em uma opção ou critério especifícado.
 def gerar_relatorio(opcao):
     produtos = ler_dados()
     if not produtos:
