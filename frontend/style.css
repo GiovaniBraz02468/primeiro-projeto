@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --branco: #ffffff;
+}
+
 /* Resetar o browser */
 * {
   padding: 0;
@@ -5,14 +11,9 @@
   box-sizing: border-box;
 }
 
-/* Variaveis com as cores, tamanho texto e bordar */
-:root {
-  --cor-texto1: #ffffff;
-}
-
 /* Configurações do corpo do site */
 body {
-  background: linear-gradient(135deg, #c3cdfe, #e0e7ff);
+  background: #CCE2FF;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -52,21 +53,12 @@ img {
   margin-right: auto;
 }
 
-/* Header background */
+
 .header-bg {
+  background: linear-gradient(135deg, #002C66, #0A1C33);
   border-radius: 16px;
   max-width: 1240px;
   margin: 20px auto;
-}
-
-.header-bg {
-  background: linear-gradient(135deg, #60a5fa, #0b3c78, #60a5fa);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-
-.header-menu a,
-.logo-text {
-  color: var(--cor-texto1);
 }
 
 /* Alterar o tamanho da logo */
@@ -84,7 +76,7 @@ img {
 .logo-text {
   font-size: 18px;
   font-weight: bold;
-  color: var(--cor-texto1);
+  color: var(--branco);
   line-height: 1;
 }
 
@@ -97,7 +89,7 @@ img {
 
 .header-menu a {
   display: inline-block;
-  color: var(--cor-texto1);
+  color: var(--branco);
   padding: 16px 0;
   font-size: 18px;
   position: relative;
@@ -108,7 +100,7 @@ img {
   display: block;
   height: 2px;
   width: 0px;
-  background-color: var(--cor-texto1);
+  background-color: var(--branco);
   margin-top: 4px;
   position: absolute;
   transition: 0.5s;
@@ -127,7 +119,7 @@ img {
 
 /* Alterando a cor do INOVATECH */
 .text-titulo {
-  color: #0b3c78;
+  color: #0b4fa1;
 }
 
 .intro {
@@ -139,20 +131,19 @@ img {
   text-align: center;
   font-size: 48px;
   margin-bottom: 16px;
-  color: #0f172a;
+  color: #0A1C33;
+  font-weight: 700;
+  letter-spacing: -1px;
 }
 
-/* Main introdução paragrafo */
 .intro p {
   max-width: 600px;
   font-size: 20px;
-  line-height: 1.6;
-  margin-bottom: 30px;
+  line-height: 1.7;
   margin: 0 auto 32px;
-  color: #334155;
+  color: #1e293b;
 }
 
-/* Main introdução titulo de nivel 2 - h2 */
 .intro h2 {
   display: flex;
   align-items: center;
@@ -160,48 +151,89 @@ img {
   gap: 16px;
   font-size: 28px;
   margin-bottom: 40px;
+  color: #002C66;
+  font-weight: 600;
 }
 
-/* Link saiba mais */
 .saiba-mais {
-  font-size: 20px;
-  color: var(--cor-texto1);
-  background: linear-gradient(135deg, #60a5fa, #0b3c78, #60a5fa);
-  padding: 8px 12px;
-  border-radius: 6px;
+  font-size: 18px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #002C66, #0A1C33);
+  padding: 10px 18px;
+  border-radius: 8px;
   line-height: 1.5;
-  position: relative;
+  border: none;
+  cursor: pointer;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(10, 28, 51, 0.15);
+}
+
+.saiba-mais a {
+  text-decoration: none;
+  color: var(--branco);
+}
+
+.saiba-mais:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(10, 28, 51, 0.25);
+}
+
+.produtos-card-index h3 {
+  font-size: 20px;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.produtos-card-index p {
+  font-size: 16px;
+  margin-bottom: 5px;
+  color: rgb(9, 49, 110);
 }
 
 /* Produtos index main */
-.produtos {
+.produtos-index {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
   margin-top: 40px;
 }
 
-.produto {
+.produtos-card-index {
+  padding: 24px;
+  background: #FFFFFF;
   border-radius: 16px;
-  padding: 20px;
-  background: linear-gradient(135deg, #92b9ea, #c9dcf2, #cbd7e6);
-  box-shadow: 0 20px 25px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 12px 30px rgba(10, 28, 51, 0.12);
   text-align: center;
-  color: #0f172a;
+  color: #0A1C33;
+  transition: 0.3s ease;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
 }
 
-.produto img {
+.produtos-card-index:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(10, 28, 0, 0.1);
+}
+
+.produtos-card-index:hover p {
+  font-size: 20px; 
+}
+
+.produtos-card-index:hover h3 {
+  font-size: 22px;
+}
+
+.produtos-card-index:hover .preco {
+  color: rgb(255, 255, 255);
+  font-size: 20px; 
+}
+
+.produtos-card-index img {
   max-width: 100%;
   border-radius: 12px;
   margin-bottom: 5px;
-}
-.produto h3 {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-.produto p {
-  font-size: 16px;
-  margin-bottom: 5px;
+  transition: 0.3s;
 }
 
 .preco {
@@ -209,73 +241,130 @@ img {
   font-size: 18px;
   font-weight: 700;
   color: #e4e6eb;
-  background: linear-gradient(135deg, #92b9ea, #6faaed, #5c92d4);
+  background: linear-gradient(135deg, #002C66, #0A1C33);
   padding: 8px 10px;
   border-radius: 4px;
   margin-top: 5px;
+  transition: 0.3s ease;
+}
+
+.produtos-card-index:hover .preco {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  
 }
 
 /* Beneficios index */
 .beneficios {
-  margin: 80px auto;
+  background: linear-gradient(145deg, #002C66, #0A1C33);
+  margin: 100px auto;
   text-align: center;
+  border-radius: 24px;
+  padding: 60px;
+  max-width: 1100px;
+  box-shadow: 0 30px 60px rgba(10, 28, 51, 0.25);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.beneficios:hover {
+  transform: scale(1.02);
+} 
+
 .beneficios h2 {
-  font-size: 36px;
-  margin-bottom: 32px;
-  color: #0f172a;
+  font-size: 38px;
+  margin-bottom: 40px;
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: -1px;
+} 
+
+.beneficios h2 span {
+  color: #5287CC;
 }
-.beneficios-box {
-  border-radius: 20px;
-  padding: 40px;
-  max-width: 1000px;
-  margin: 0 auto;
-  background: linear-gradient(135deg, #92b9ea, #c9dcf2, #cbd7e6);
-  box-shadow: 0 20px 25px 25px rgba(0, 0, 0, 0.1);
-}
+
 .beneficios-lista {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 32px;
-  text-align: start;
+  gap: 24px;
+  text-align: left;
   padding: 0;
   margin: 0;
 }
-.beneficios-lista h3 {
-  font-size: 20px;
-  margin-bottom: 8px;
-  color: #01010b;
+
+.beneficios-lista li {
+  list-style: none;
+  font-size: 18px;
+  color: #E2E8F0;
+  position: relative;
+  padding-left: 30px;
 }
+
+.beneficios-lista li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #99C5FF;
+  font-weight: bold;
+} 
 
 /* Footer index*/
 .footer {
-  background: linear-gradient(135deg, #60a5fa, #0b3c78, #60a5fa);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  color: var(--cor-texto1);
+  background: linear-gradient(135deg, #002C66, #0A1C33);
+  color: var(--branco);
   padding: 40px 20px;
   text-align: center;
 }
+
 .footer p {
   margin: 8px 0;
   font-size: 1rem;
 }
 
+.footer a {
+  text-decoration: none;
+  color: #99C5FF;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.footer a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0%;
+  height: 2px;
+  background: #5287CC;
+  transition: width 0.3s ease;
+}
+
+.footer a:hover {
+  color: #FFFFFF;
+}
+
+.footer a:hover::after {
+  width: 100%;
+} 
+
 /* Produtos */
 .produtos img {
   width: 300px;
   height: 300px;
-  justify-content: center; 
-  gap: 30px; 
-  flex-wrap: wrap; 
+  justify-content: center; /* centraliza */
+  gap: 30px; /* espaço entre produtos */
+  flex-wrap: wrap; /* quebra linha se não couber */
   margin-top: 30px;
 }
 
 .produtos {
   display: flex;
-  justify-content: center; 
-  gap: 30px; 
+  justify-content: center; /* centraliza */
+  gap: 30px; /* espaço entre produtos */
   flex-wrap: wrap; 
-  margin-top: 40px;
+  margin: 40px;
 }
 
 .fundo {
@@ -309,9 +398,9 @@ img {
 .compra {
   display: block;
   background-color: rgb(74, 253, 74);
-  color: var(--cor-texto1);
+  color: var(--branco);
   padding: 8px 12px;
-  margin: 10px auto;
+  margin: 10px auto; /* isso centraliza */
   border-radius: 4px;
   width: fit-content;
 }
@@ -362,13 +451,13 @@ img {
 }
 
 .contato {
-  background: linear-gradient(135deg, #60a5fa, #0b3c78, #60a5fa);
+  background: linear-gradient(135deg, #0e1eff, #00aeff);
   display: block;
   padding: 40px;
   width: 500px;
   border-radius: 15px;
-  box-shadow: 0 8px 8px #ffffff;
-  margin: 60px auto;
+  box-shadow: 0 8px 8px #7c8097;
+  margin: 60px auto; /* centraliza */
 }
 .contato h2 {
   font-size: 32px;
@@ -382,15 +471,11 @@ img {
   padding: 12px;
   margin-bottom: 12px;
   font-size: 16px;
-  border-radius: 15px;
-  border: none;
 }
 .contato button {
   padding: 12px 20px;
   font-size: 16px;
   cursor: pointer;
-  border-radius: 15px;
-  border: none;
 }
 .contato {
   width: 90%;
@@ -398,40 +483,7 @@ img {
   padding: 40px;
   margin: 60px auto;
 }
-.info-contato {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px;
-    color: rgb(0, 0, 0);
-    border-radius: 15px;
-    text-shadow: #ffffff 1px 1px 2px;
-    text-align: center;
-}
 
-.info-contato h3 {
-    margin-bottom: 20px;
-}
-
-.info-contato p {
-    margin: 10px 0;
-    font-size: 16px;
-}
-
-.redes {
-    margin-top: 20px;
-}
-
-.redes a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.redes a:hover {
-    color: #ffd700;
-}
 /* Responsivo */
 @media (max-width: 1024px) {
   .produtos {
@@ -538,7 +590,7 @@ img {
 .compra {
   display: block;
   background-color: rgb(74, 253, 74);
-  color: var(--cor-texto1);
+  color: var(--branco);
   padding: 8px 12px;
   margin-top: auto; /* ESSA LINHA EMPURRA PRA BAIXO */
   margin-left: auto;
@@ -569,8 +621,6 @@ img {
   margin-right: 10px;
 }
 
-
-
 .texto {
   color: rgb(73, 46, 46);
   font-size: 50px;
@@ -593,6 +643,3 @@ img {
   border-radius: 4px;
   border: 1px solid #ccc;
 }
-
-
-/*Final pagina produtos*/
