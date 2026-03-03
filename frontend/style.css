@@ -398,7 +398,40 @@ img {
   padding: 40px;
   margin: 60px auto;
 }
+.info-contato {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    text-shadow: #ffffff 1px 1px 2px;
+    text-align: center;
+}
 
+.info-contato h3 {
+    margin-bottom: 20px;
+}
+
+.info-contato p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.redes {
+    margin-top: 20px;
+}
+
+.redes a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #ffd700;
+}
 /* Responsivo */
 @media (max-width: 1024px) {
   .produtos {
