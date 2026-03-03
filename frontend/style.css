@@ -264,17 +264,17 @@ img {
 .produtos img {
   width: 300px;
   height: 300px;
-  justify-content: center; /* centraliza */
-  gap: 30px; /* espaço entre produtos */
-  flex-wrap: wrap; /* quebra linha se não couber */
+  justify-content: center; 
+  gap: 30px; 
+  flex-wrap: wrap; 
   margin-top: 30px;
 }
 
 .produtos {
   display: flex;
-  justify-content: center; /* centraliza */
-  gap: 30px; /* espaço entre produtos */
-  flex-wrap: wrap; /* quebra linha se não couber */
+  justify-content: center; 
+  gap: 30px; 
+  flex-wrap: wrap; 
   margin-top: 40px;
 }
 
@@ -311,7 +311,7 @@ img {
   background-color: rgb(74, 253, 74);
   color: var(--cor-texto1);
   padding: 8px 12px;
-  margin: 10px auto; /* isso centraliza */
+  margin: 10px auto;
   border-radius: 4px;
   width: fit-content;
 }
@@ -362,13 +362,13 @@ img {
 }
 
 .contato {
-  background: linear-gradient(135deg, #0e1eff, #00aeff);
+  background: linear-gradient(135deg, #60a5fa, #0b3c78, #60a5fa);
   display: block;
   padding: 40px;
   width: 500px;
   border-radius: 15px;
-  box-shadow: 0 8px 8px #7c8097;
-  margin: 60px auto; /* centraliza */
+  box-shadow: 0 8px 8px #ffffff;
+  margin: 60px auto;
 }
 .contato h2 {
   font-size: 32px;
@@ -382,11 +382,15 @@ img {
   padding: 12px;
   margin-bottom: 12px;
   font-size: 16px;
+  border-radius: 15px;
+  border: none;
 }
 .contato button {
   padding: 12px 20px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 15px;
+  border: none;
 }
 .contato {
   width: 90%;
