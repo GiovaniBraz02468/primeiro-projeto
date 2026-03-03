@@ -56,6 +56,10 @@ def main():
             listar_produtos()  
 
         elif opcao == 3:
+            if not tem_produto():
+                print("Não há produtos cadastrados.")
+                continue
+            
             print('\n   ATUALIZAR PRODUTO   ')
             id_produto = input('ID do produto: ').strip()
             
