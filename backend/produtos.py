@@ -155,3 +155,21 @@ def deletar_produto(id):
     
     salvar_dados(nova_lista)
     print('Produto deletado permanentemente!')
+
+def gerar_relatorio(opcao):
+    produtos = ler_dados()
+    if not produtos:
+        print("Nenhum produto cadastrados.")
+        return
+    
+    if opcao == 1:
+        ordenado = sorted(produtos, key=lambda p: p['id'])
+    elif opcao == 2:
+        ordenado = sorted(produtos, key=lambda p: p['nome'].lower())
+    elif opcao == 3:
+        ordenado = sorted(produtos, key=lambda p: p['nome'].lower(), reverse=True)
+
+    print("\n=== RELATÓRIO DE PRODUTOS ===")
+    for p in ordenado:
+        status_texto = "ATIVO" if p['status'] else "INATIVO"
+        print(f"[{p['id']}] {p['nome']} | R$ {p['preco']:.2f} | Qtd: {p['quantidade']} | {status_texto}")        
