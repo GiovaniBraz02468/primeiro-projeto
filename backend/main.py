@@ -61,6 +61,10 @@ def main():
             if id_produto == "":
                 print("ID não pode estar vazio!")
                 continue
+
+            if not produto_existe(id_produto):
+                print("Produto não encontrado.")
+                continue
               
             nome = input('Novo nome: ').strip()
             
@@ -107,6 +111,10 @@ def main():
             atualizar_produto(id_produto, nome, preco, quantidade, status)
 
         elif opcao == 4:
+            if not tem_produto():
+                print("Não há produtos cadastrados.")
+                continue
+
             print('\n   GERENCIAR PRODUTO   ')
             id_produto = input('Digite o ID do produto: ').strip()
 

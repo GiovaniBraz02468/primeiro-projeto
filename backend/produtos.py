@@ -1,4 +1,5 @@
 from datetime import datetime
+import os
 
 arquivo = 'dados.txt'
 
@@ -128,7 +129,16 @@ def atualizar_produto(id_produto, novo_nome, novo_preco, nova_quantidade, status
     status_texto = "ATIVO" if status else "INATIVO"
     print(f'Produto atualizado! Status: {status_texto}')
 
+def tem_produto():
+    if not os.path.exists(arquivo):
+        return False
+    produtos = ler_dados()
+    return len(produtos) > 0    
+
 def deletar_produto(id):
+    if not tem_produto():
+        print("Não tem produtos cadastrados.")
+        return
     produtos = ler_dados()
     nova_lista = []
     produto_encontrado = False
