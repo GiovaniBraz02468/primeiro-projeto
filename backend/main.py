@@ -6,7 +6,8 @@ def mostrar_menu():
     print('2 - Listar produtos')
     print('3 - Atualizar produto')
     print('4 - Deletar produto')
-    print('5 - Sair')
+    print('5 - Relatório')
+    print('6 - Sair')
 
 def main():
     while True:
@@ -159,6 +160,24 @@ def main():
                     print('Digite apenas números!')
 
         elif opcao == 5:
+            print('\n    RELATÓRIO   ')
+            print('1 - Listar por ordem de código')
+            print('2 - Listar por nome (A - Z)')
+            print('3 - Listar por nome (Z - A)')
+
+            while True:
+                try:
+                    tipo_relatorio = int(input('\nEscolha uma opção: '))
+                    if tipo_relatorio not in (1, 2, 3):
+                        print('Opção inválida, Tente novamente')
+                        continue
+                    break
+                except ValueError:
+                    print('Digite apenas números!')
+
+            gerar_relatorio(tipo_relatorio)
+
+        elif opcao == 6:
             print('Volte sempre!')
             print('Saindo do sistema...')
             break
