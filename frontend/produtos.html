@@ -33,12 +33,12 @@
     </div>
   </header>
     
-  <div class="btcompra" >
-    <input type="text" name="pesquisa" id="pesquisa" placeholder="Pesquisar produtos..." class="pesquisa">
-    <img src="produtos-img/carrinho.png" alt="carrinho" class="carrinho">
+  <div class="topo" >
+    <input type="text" name="barra" id="pesquisa" placeholder="Pesquisar produtos..." class="barra"> 
+    <div class="carrinho">
+      <img onclick="alert('Carrinho não disponível no momento. Por favor, tente novamente mais tarde.');" src="produtos-img/carrinho.png" alt="carrinho">
+    </div>  
   </div>
-
-    
 
     <div class="produtos">
       <div class="fundo-produtos">
@@ -167,6 +167,23 @@
     <p>© 2026 Inova Tech. Todos os direitos reservados.</p>
     <p>Desenvolvido por <a href="https://cursar.me" target="_blank">Cursar</a></p>
   </footer>
+
+  <script>
+  const searchInput = document.getElementById('pesquisa');
+  searchInput.addEventListener('input', function() {
+    const query = this.value.toLowerCase();
+    const products = document.querySelectorAll('.fundo-produtos');
+    
+    products.forEach(product => {
+      const description = product.querySelector('.descricao-produtos').textContent.toLowerCase();
+      if (description.includes(query)) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  });
+</script>
   
 </body> 
 </html>
