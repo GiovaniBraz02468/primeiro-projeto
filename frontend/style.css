@@ -451,7 +451,7 @@ img {
 }
 
 .contato {
-  background: linear-gradient(135deg, #0e1eff, #00aeff);
+  background: linear-gradient(135deg,#002C66 , #0A1C33, #00aeff);
   display: block;
   padding: 40px;
   width: 500px;
@@ -464,6 +464,7 @@ img {
   margin-bottom: 20px;
   color: rgb(255, 255, 255);
   font-size: 20px;
+  border-radius: 15px;
 }
 .contato input,
 .contato textarea {
@@ -471,17 +472,54 @@ img {
   padding: 12px;
   margin-bottom: 12px;
   font-size: 16px;
+  border-radius: 15px;
+  border: none;
 }
 .contato button {
   padding: 12px 20px;
   font-size: 16px;
   cursor: pointer;
+  border-radius: 15px;
+  border: none;
 }
 .contato {
   width: 90%;
   max-width: 600px;
   padding: 40px;
   margin: 60px auto;
+}
+.info-contato {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 25px;
+    color: rgb(0, 0, 0);
+    border-radius: 15px;
+    text-align: center;
+}
+
+.info-contato h3 {
+    margin-bottom: 20px;
+}
+
+.info-contato p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.redes {
+    margin-top: 20px;
+}
+
+.redes a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.redes a:hover {
+    color: #ffd700;
 }
 
 /* Responsivo */
