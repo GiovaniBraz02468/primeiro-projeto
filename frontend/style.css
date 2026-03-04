@@ -662,7 +662,7 @@ nav a:hover {
   color: white;
 }
 
-input::placeholder {
+.btcompra input::placeholder {
   color: white;
 }
 
