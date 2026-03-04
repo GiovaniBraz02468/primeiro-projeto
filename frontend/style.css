@@ -32,7 +32,6 @@ a {
 ul {
   list-style: none;
 }
-
 /* Imagem logo */
 img {
   display: block;
@@ -62,7 +61,7 @@ img {
   margin: 20px auto;
 }
 
-
+/* Alterar o tamanho da logo */
 .header-logo {
   display: flex;
   align-items: center;
@@ -221,7 +220,7 @@ nav a:hover {
 }
 
 .produtos-card-index:hover p {
-  font-size: 20px;
+  font-size: 20px; 
 }
 
 .produtos-card-index:hover h3 {
@@ -230,7 +229,7 @@ nav a:hover {
 
 .produtos-card-index:hover .preco {
   color: rgb(255, 255, 255);
-  font-size: 20px;
+  font-size: 20px; 
 }
 
 .produtos-card-index img {
@@ -255,7 +254,7 @@ nav a:hover {
 .produtos-card-index:hover .preco {
   color: rgb(255, 255, 255);
   font-size: 20px;
-
+  
 }
 
 /* Beneficios index */
@@ -274,7 +273,7 @@ nav a:hover {
 
 .beneficios:hover {
   transform: scale(1.02);
-}
+} 
 
 .beneficios h2 {
   font-size: 38px;
@@ -282,7 +281,7 @@ nav a:hover {
   color: #ffffff;
   font-weight: 700;
   letter-spacing: -1px;
-}
+} 
 
 .beneficios-lista {
   display: grid;
@@ -307,7 +306,7 @@ nav a:hover {
   left: 0;
   color: #99C5FF;
   font-weight: bold;
-}
+} 
 
 /* Footer index*/
 .footer {
@@ -347,120 +346,66 @@ nav a:hover {
 
 .footer a:hover::after {
   width: 100%;
-}
+} 
 
 /* Produtos */
 .produtos img {
   width: 300px;
   height: 300px;
-  justify-content: center;
-  /* centraliza */
-  gap: 30px;
-  /* espaço entre produtos */
-  flex-wrap: wrap;
-  /* quebra linha se não couber */
+  justify-content: center; /* centraliza */
+  gap: 30px; /* espaço entre produtos */
+  flex-wrap: wrap; /* quebra linha se não couber */
   margin-top: 30px;
 }
 
 .produtos {
   display: flex;
-  justify-content: center;
-  /* centraliza */
-  gap: 30px;
-  /* espaço entre produtos */
-  flex-wrap: wrap;
+  justify-content: center; /* centraliza */
+  gap: 30px; /* espaço entre produtos */
+  flex-wrap: wrap; 
   margin: 40px;
 }
 
-.fundo {
-  background-color: rgb(207, 230, 230);
-  display: block;
-  padding: 20px;
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 8px 8px #7c8097;
-}
 
-.descricao {
-  color: rgb(73, 46, 46);
-  font-size: 15px;
+.dadoscad {
   margin-top: 10px;
-  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.desconto {
-  text-decoration: line-through;
-  text-align: center;
+.atencao {
+  margin-top: 06px;
+  color: blue;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.preço {
-  color: rgb(74, 253, 74);
-  font-size: 40px;
+.Oque {
   margin-top: 10px;
-  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.compra {
-  display: block;
-  background-color: rgb(74, 253, 74);
-  color: var(--branco);
-  padding: 8px 12px;
-  margin: 10px auto;
-  /* isso centraliza */
-  border-radius: 4px;
-  width: fit-content;
+.Horarios {
+  margin-top: 05px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.sobre-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 50px;
-  padding: 60px;
-  background-color: #eaf1f8;
+.integrantes {
+  margin-top: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.sobre-texto {
-  flex: 2;
-}
-
-.sobre-texto h1 {
-  font-size: 40px;
-  color: #0a3d62;
-  margin-bottom: 20px;
-}
-
-.sobre-texto p {
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-.info-box {
-  background-color: white;
-  padding: 15px 20px;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-}
-
-.info-box h3 {
-  margin-bottom: 10px;
-  color: #0a3d62;
-}
-
-.sobre-imagem {
-  flex: 1;
-  text-align: center;
-  
-}
-
-.sobre-imagem img {
-  width: 100%;
+.imagem {
   max-width: 350px;
-  border-radius: 12px;
-  margin-top: 548px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-  
+  margin-left: 900px;
+  margin-top: -225px;
+}
+
+.botao {
+  background-color: #007bff;
+  color: white;
+  padding: 8px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .botao:hover {
@@ -474,10 +419,8 @@ nav a:hover {
   width: 500px;
   border-radius: 15px;
   box-shadow: 0 8px 8px #7c8097;
-  margin: 60px auto;
-  /* centraliza */
+  margin: 60px auto; /* centraliza */
 }
-
 .contato h2 {
   font-size: 32px;
   margin-bottom: 20px;
@@ -485,7 +428,6 @@ nav a:hover {
   font-size: 20px;
   border-radius: 15px;
 }
-
 .contato input,
 .contato textarea {
   width: 100%;
@@ -495,16 +437,13 @@ nav a:hover {
   border-radius: 15px;
   border: none;
 }
-
 .contato button {
   padding: 12px 20px;
   font-size: 16px;
   cursor: pointer;
   border-radius: 15px;
   border: none;
-  font-family: "Roboto", sans-serif;
 }
-
 .contato {
   width: 90%;
   max-width: 600px;
@@ -585,7 +524,6 @@ nav a:hover {
   .produtos-index {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .header {
     justify-content: space-between;
   }
@@ -596,43 +534,35 @@ nav a:hover {
     flex-direction: column;
     gap: 16px;
   }
-
   .header-menu {
     justify-content: center;
     gap: 24px;
   }
-
   .intro h1 {
     font-size: 36px;
   }
-
   .intro p {
     font-size: 18px;
   }
-
-.produtos-index {
+  .produtos-index {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
-
   .beneficios-box {
     padding: 24px;
   }
-
+}
 
 @media (max-width: 480px) {
   .intro h1 {
     font-size: 28px;
   }
-
   .intro h2 {
     font-size: 22px;
   }
-
   .logo-text {
     font-size: 16px;
   }
-
   .header-menu a {
     font-size: 16px;
   }
@@ -643,12 +573,9 @@ nav a:hover {
   width: 300px;
   height: 300px;
   background-color: white;
-  justify-content: center;
-  /* centraliza */
-  gap: 30px;
-  /* espaço entre produtos */
-  flex-wrap: wrap;
-  /* quebra linha se não couber */
+  justify-content: center; /* centraliza */
+  gap: 30px; /* espaço entre produtos */
+  flex-wrap: wrap; /* quebra linha se não couber */
   margin-top: 30px;
   border-radius: 30px;
 }
@@ -658,29 +585,19 @@ nav a:hover {
   margin-top: 40px;
 }
 
-
-.fundo:hover {
-  transform: scale(1.05);
-  /* aumenta um pouco */
-  transition: transform 0.3s ease;
-  /* animação suave */
-}
 .fundo-produtos:hover {
   transform: scale(1.05); /* aumenta um pouco */
   transition: transform 0.3s ease; /* animação suave */
-
 }
 
 .fundo-produtos {
   background: #FFFFFF;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  /* distribui melhor */
+  justify-content: space-between; /* distribui melhor */
   padding: 20px;
   width: 300px;
-  height: 550px;
-  /* todos terão a mesma altura */
+  height: 550px; /* todos terão a mesma altura */
   border-radius: 12px;
   box-shadow: 0 12px 30px rgba(10, 28, 51, 0.12);
 }
@@ -689,12 +606,8 @@ nav a:hover {
   color: black;
   font-size: 15px;
   text-align: center;
-
-  min-height: 60px;
-  /* força todas a ocupar mesmo espaço */
   min-height: 90px;
   margin-top: 20px;
-
 }
 
 .desconto-produtos {
@@ -719,11 +632,6 @@ nav a:hover {
   background: linear-gradient(135deg, #002C66, #0A1C33);
   color: var(--branco);
   padding: 8px 12px;
-   margin-top: auto;
-  /* ESSA LINHA EMPURRA PRA BAIXO */
-  margin-left: auto;
-  margin-right: auto;
-
   border-radius: 4px;
   cursor: pointer;
   border: none;
@@ -739,14 +647,9 @@ nav a:hover {
 
 .topo {
   display: flex;
-
-  justify-content: center;
-  /* Alinha o botão à direita */
-  padding: 20px;
   align-items: center;
   justify-content: center;
   gap: 20px;
-
 }
 
 .barra {
@@ -781,36 +684,44 @@ nav a:hover {
   align-items: center;
 }
 
-
-
-.pesquisa {
-  display: block;
-  margin: 20px auto;
-  /* centraliza */
-  padding: 10px;
-  width: 300px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
+.sobre-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 60px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
-
-.title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 32px;
-  font-weight: 600;
-  color: #0b4fa1;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  margin: 20px 0;
+.sobre-texto {
+  flex: 2;
 }
 
-.title:hover {
-  color: #0b4fa1;
-  text-shadow:
-    0 0 10px #0141a0,
-    0 0 20px #0141a0,
-    0 0 40px #0141a0;
-  transform: scale(1.05);
+.info-box {
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
+
+.info-box h3 {
+  margin-bottom: 10px;
+  color: #0a3d62;
+}
+
+.sobre-imagem {
+  flex: 1;
+  text-align: center;
+}
+
+.sobre-imagem img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  margin-top: 548px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.botao:hover {
+  background-color: #0056b3;
 }
