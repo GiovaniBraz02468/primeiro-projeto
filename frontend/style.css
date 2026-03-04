@@ -32,6 +32,7 @@ a {
 ul {
   list-style: none;
 }
+
 /* Imagem logo */
 img {
   display: block;
@@ -217,7 +218,7 @@ img {
 }
 
 .produtos-card-index:hover p {
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 .produtos-card-index:hover h3 {
@@ -226,7 +227,7 @@ img {
 
 .produtos-card-index:hover .preco {
   color: rgb(255, 255, 255);
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 .produtos-card-index img {
@@ -251,7 +252,7 @@ img {
 .produtos-card-index:hover .preco {
   color: rgb(255, 255, 255);
   font-size: 20px;
-  
+
 }
 
 /* Beneficios index */
@@ -270,7 +271,7 @@ img {
 
 .beneficios:hover {
   transform: scale(1.02);
-} 
+}
 
 .beneficios h2 {
   font-size: 38px;
@@ -278,7 +279,7 @@ img {
   color: #ffffff;
   font-weight: 700;
   letter-spacing: -1px;
-} 
+}
 
 .beneficios h2 span {
   color: #5287CC;
@@ -307,7 +308,7 @@ img {
   left: 0;
   color: #99C5FF;
   font-weight: bold;
-} 
+}
 
 /* Footer index*/
 .footer {
@@ -347,23 +348,28 @@ img {
 
 .footer a:hover::after {
   width: 100%;
-} 
+}
 
 /* Produtos */
 .produtos img {
   width: 300px;
   height: 300px;
-  justify-content: center; /* centraliza */
-  gap: 30px; /* espaço entre produtos */
-  flex-wrap: wrap; /* quebra linha se não couber */
+  justify-content: center;
+  /* centraliza */
+  gap: 30px;
+  /* espaço entre produtos */
+  flex-wrap: wrap;
+  /* quebra linha se não couber */
   margin-top: 30px;
 }
 
 .produtos {
   display: flex;
-  justify-content: center; /* centraliza */
-  gap: 30px; /* espaço entre produtos */
-  flex-wrap: wrap; 
+  justify-content: center;
+  /* centraliza */
+  gap: 30px;
+  /* espaço entre produtos */
+  flex-wrap: wrap;
   margin: 40px;
 }
 
@@ -400,50 +406,62 @@ img {
   background-color: rgb(74, 253, 74);
   color: var(--branco);
   padding: 8px 12px;
-  margin: 10px auto; /* isso centraliza */
+  margin: 10px auto;
+  /* isso centraliza */
   border-radius: 4px;
   width: fit-content;
 }
 
-.dadoscad {
-  margin-top: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+.sobre-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 60px;
+  background-color: #eaf1f8;
 }
 
-.atencao {
-  margin-top: 06px;
-  color: blue;
-  font-family: Arial, Helvetica, sans-serif;
+.sobre-texto {
+  flex: 2;
 }
 
-.Oque {
-  margin-top: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+.sobre-texto h1 {
+  font-size: 40px;
+  color: #0a3d62;
+  margin-bottom: 20px;
 }
 
-.Horarios {
-  margin-top: 05px;
-  font-family: Arial, Helvetica, sans-serif;
+.sobre-texto p {
+  line-height: 1.6;
+  margin-bottom: 20px;
 }
 
-.integrantes {
-  margin-top: 10px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.imagem {
-  max-width: 350px;
-  margin-left: 900px;
-  margin-top: -225px;
-}
-
-.botao {
-  background-color: #007bff;
-  color: white;
-  padding: 8px 20px;
-  text-decoration: none;
+.info-box {
+  background-color: white;
+  padding: 15px 20px;
   border-radius: 8px;
-  display: inline-block;
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.info-box h3 {
+  margin-bottom: 10px;
+  color: #0a3d62;
+}
+
+.sobre-imagem {
+  flex: 1;
+  text-align: center;
+  
+}
+
+.sobre-imagem img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 12px;
+  margin-top: 548px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  
 }
 
 .botao:hover {
@@ -457,14 +475,17 @@ img {
   width: 500px;
   border-radius: 15px;
   box-shadow: 0 8px 8px #7c8097;
-  margin: 60px auto; /* centraliza */
+  margin: 60px auto;
+  /* centraliza */
 }
+
 .contato h2 {
   font-size: 32px;
   margin-bottom: 20px;
   color: rgb(255, 255, 255);
   font-size: 20px;
 }
+
 .contato input,
 .contato textarea {
   width: 100%;
@@ -472,11 +493,13 @@ img {
   margin-bottom: 12px;
   font-size: 16px;
 }
+
 .contato button {
   padding: 12px 20px;
   font-size: 16px;
   cursor: pointer;
 }
+
 .contato {
   width: 90%;
   max-width: 600px;
@@ -489,6 +512,7 @@ img {
   .produtos {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .header {
     justify-content: space-between;
   }
@@ -499,20 +523,25 @@ img {
     flex-direction: column;
     gap: 16px;
   }
+
   .header-menu {
     justify-content: center;
     gap: 24px;
   }
+
   .intro h1 {
     font-size: 36px;
   }
+
   .intro p {
     font-size: 18px;
   }
+
   .produtos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
+
   .beneficios-box {
     padding: 24px;
   }
@@ -522,24 +551,31 @@ img {
   .intro h1 {
     font-size: 28px;
   }
+
   .intro h2 {
     font-size: 22px;
   }
+
   .logo-text {
     font-size: 16px;
   }
+
   .header-menu a {
     font-size: 16px;
   }
 }
+
 /* Produtos */
 .produtos img {
   width: 300px;
   height: 300px;
   background-color: white;
-  justify-content: center; /* centraliza */
-  gap: 30px; /* espaço entre produtos */
-  flex-wrap: wrap; /* quebra linha se não couber */
+  justify-content: center;
+  /* centraliza */
+  gap: 30px;
+  /* espaço entre produtos */
+  flex-wrap: wrap;
+  /* quebra linha se não couber */
   margin-top: 30px;
   border-radius: 30px;
 }
@@ -550,18 +586,22 @@ img {
 }
 
 .fundo:hover {
-  transform: scale(1.05); /* aumenta um pouco */
-  transition: transform 0.3s ease; /* animação suave */
+  transform: scale(1.05);
+  /* aumenta um pouco */
+  transition: transform 0.3s ease;
+  /* animação suave */
 }
 
 .fundo {
   background-color: rgba(201, 247, 247, 0.301);
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* distribui melhor */
+  justify-content: space-between;
+  /* distribui melhor */
   padding: 20px;
   width: 300px;
-  height: 550px; /* todos terão a mesma altura */
+  height: 550px;
+  /* todos terão a mesma altura */
   border-radius: 12px;
   box-shadow: 0 8px 8px #7c8097;
 }
@@ -570,7 +610,8 @@ img {
   color: rgb(73, 46, 46);
   font-size: 15px;
   text-align: center;
-  min-height: 60px; /* força todas a ocupar mesmo espaço */
+  min-height: 60px;
+  /* força todas a ocupar mesmo espaço */
 }
 
 .desconto {
@@ -592,7 +633,8 @@ img {
   background-color: rgb(74, 253, 74);
   color: var(--branco);
   padding: 8px 12px;
-  margin-top: auto; /* ESSA LINHA EMPURRA PRA BAIXO */
+  margin-top: auto;
+  /* ESSA LINHA EMPURRA PRA BAIXO */
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
@@ -601,7 +643,8 @@ img {
 
 .btcompra {
   display: flex;
-  justify-content: center; /* Alinha o botão à direita */
+  justify-content: center;
+  /* Alinha o botão à direita */
   padding: 20px;
 }
 
@@ -637,9 +680,31 @@ img {
 
 .pesquisa {
   display: block;
-  margin: 20px auto; /* centraliza */
+  margin: 20px auto;
+  /* centraliza */
   padding: 10px;
   width: 300px;
   border-radius: 4px;
   border: 1px solid #ccc;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+.title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #0b4fa1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+
+.title:hover {
+  color: #0b4fa1;
+  text-shadow:
+    0 0 10px #0141a0,
+    0 0 20px #0141a0,
+    0 0 40px #0141a0;
+  transform: scale(1.05);
 }
