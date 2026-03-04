@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --branco: #ffffff;
@@ -13,7 +13,7 @@
 
 /* Configurações do corpo do site */
 body {
-  background: #CCE2FF;
+  background: #cce2ff;
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
@@ -53,9 +53,8 @@ img {
   margin-right: auto;
 }
 
-
 .header-bg {
-  background: linear-gradient(135deg, #002C66, #0A1C33);
+  background: linear-gradient(135deg, #002c66, #0a1c33);
   border-radius: 16px;
   max-width: 1240px;
   margin: 20px auto;
@@ -111,7 +110,7 @@ img {
 }
 
 nav a:hover {
-  color: #99C5FF;
+  color: #99c5ff;
 }
 
 /* Main */
@@ -135,7 +134,7 @@ nav a:hover {
   text-align: center;
   font-size: 48px;
   margin-bottom: 16px;
-  color: #0A1C33;
+  color: #0a1c33;
   font-weight: 700;
   letter-spacing: -1px;
 }
@@ -155,21 +154,23 @@ nav a:hover {
   gap: 16px;
   font-size: 28px;
   margin-bottom: 40px;
-  color: #002C66;
+  color: #002c66;
   font-weight: 600;
 }
 
 .saiba-mais {
   font-size: 18px;
   color: #ffffff;
-  background: linear-gradient(135deg, #002C66, #0A1C33);
+  background: linear-gradient(135deg, #002c66, #0a1c33);
   padding: 10px 18px;
   border-radius: 8px;
   line-height: 1.5;
   border: none;
   cursor: pointer;
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 8px 20px rgba(10, 28, 51, 0.15);
 }
 
@@ -205,11 +206,11 @@ nav a:hover {
 
 .produtos-card-index {
   padding: 24px;
-  background: #FFFFFF;
+  background: #ffffff;
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(10, 28, 51, 0.12);
   text-align: center;
-  color: #0A1C33;
+  color: #0a1c33;
   transition: 0.3s ease;
   cursor: pointer;
 }
@@ -220,7 +221,7 @@ nav a:hover {
 }
 
 .produtos-card-index:hover p {
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 .produtos-card-index:hover h3 {
@@ -229,7 +230,7 @@ nav a:hover {
 
 .produtos-card-index:hover .preco {
   color: rgb(255, 255, 255);
-  font-size: 20px; 
+  font-size: 20px;
 }
 
 .produtos-card-index img {
@@ -244,7 +245,7 @@ nav a:hover {
   font-size: 18px;
   font-weight: 700;
   color: #e4e6eb;
-  background: linear-gradient(135deg, #002C66, #0A1C33);
+  background: linear-gradient(135deg, #002c66, #0a1c33);
   padding: 8px 10px;
   border-radius: 4px;
   margin-top: 5px;
@@ -254,12 +255,11 @@ nav a:hover {
 .produtos-card-index:hover .preco {
   color: rgb(255, 255, 255);
   font-size: 20px;
-  
 }
 
 /* Beneficios index */
 .beneficios {
-  background: linear-gradient(145deg, #002C66, #0A1C33);
+  background: linear-gradient(145deg, #002c66, #0a1c33);
   margin: 100px auto;
   text-align: center;
   border-radius: 24px;
@@ -268,12 +268,14 @@ nav a:hover {
   box-shadow: 0 30px 60px rgba(10, 28, 51, 0.25);
   position: relative;
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
 .beneficios:hover {
   transform: scale(1.02);
-} 
+}
 
 .beneficios h2 {
   font-size: 38px;
@@ -281,7 +283,7 @@ nav a:hover {
   color: #ffffff;
   font-weight: 700;
   letter-spacing: -1px;
-} 
+}
 
 .beneficios-lista {
   display: grid;
@@ -295,7 +297,7 @@ nav a:hover {
 .beneficios-lista li {
   list-style: none;
   font-size: 18px;
-  color: #E2E8F0;
+  color: #e2e8f0;
   position: relative;
   padding-left: 30px;
 }
@@ -304,13 +306,13 @@ nav a:hover {
   content: "✔";
   position: absolute;
   left: 0;
-  color: #99C5FF;
+  color: #99c5ff;
   font-weight: bold;
-} 
+}
 
 /* Footer index*/
 .footer {
-  background: linear-gradient(135deg, #002C66, #0A1C33);
+  background: linear-gradient(135deg, #002c66, #0a1c33);
   color: var(--branco);
   padding: 40px 20px;
   text-align: center;
@@ -323,7 +325,7 @@ nav a:hover {
 
 .footer a {
   text-decoration: none;
-  color: #99C5FF;
+  color: #99c5ff;
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
@@ -336,17 +338,17 @@ nav a:hover {
   bottom: -3px;
   width: 0%;
   height: 2px;
-  background: #5287CC;
+  background: #5287cc;
   transition: width 0.3s ease;
 }
 
 .footer a:hover {
-  color: #FFFFFF;
+  color: #ffffff;
 }
 
 .footer a:hover::after {
   width: 100%;
-} 
+}
 
 /* Produtos */
 .produtos img {
@@ -362,10 +364,9 @@ nav a:hover {
   display: flex;
   justify-content: center; /* centraliza */
   gap: 30px; /* espaço entre produtos */
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   margin: 40px;
 }
-
 
 .dadoscad {
   margin-top: 10px;
@@ -413,7 +414,7 @@ nav a:hover {
 }
 
 .contato {
-  background: linear-gradient(135deg,#002C66 , #0A1C33, #00aeff);
+  background: linear-gradient(135deg, #002c66, #0a1c33, #00aeff);
   display: block;
   padding: 40px;
   width: 500px;
@@ -451,72 +452,72 @@ nav a:hover {
   margin: 60px auto;
 }
 .info-contato {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px;
-    color: rgb(0, 0, 0);
-    border-radius: 15px;
-    text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  text-align: center;
 }
 
 .info-contato h3 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .info-contato p {
-    margin: 10px 0;
-    font-size: 16px;
+  margin: 10px 0;
+  font-size: 16px;
 }
 
 .redes {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .redes a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    transition: 0.3s;
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .redes a:hover {
-    color: #ffd700;
+  color: #ffd700;
 }
 
 .info-contato {
-    max-width: 600px;
-    margin: 40px auto;
-    padding: 25px;
-    color: rgb(0, 0, 0);
-    border-radius: 15px;
-    text-shadow: #ffffff 1px 1px 2px;
-    text-align: center;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 25px;
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+  text-shadow: #ffffff 1px 1px 2px;
+  text-align: center;
 }
 
 .info-contato h3 {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .info-contato p {
-    margin: 10px 0;
-    font-size: 16px;
+  margin: 10px 0;
+  font-size: 16px;
 }
 
 .redes {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .redes a {
-    margin: 0 10px;
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    transition: 0.3s;
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .redes a:hover {
-    color: #ffd700;
+  color: #ffd700;
 }
 
 /* Responsivo */
@@ -530,24 +531,75 @@ nav a:hover {
 }
 
 @media (max-width: 768px) {
+  .header-bg {
+    max-width: calc(100% - 24px);
+    margin: 16px auto;
+    border-radius: 16px;
+  }
+
   .header {
     flex-direction: column;
     gap: 16px;
+    padding: 16px;
   }
+
   .header-menu {
     justify-content: center;
-    gap: 24px;
+    gap: 20px;
   }
+
   .intro h1 {
     font-size: 36px;
   }
+
   .intro p {
     font-size: 18px;
   }
+
+  /* Produtos */
   .produtos-index {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
   }
+
+  .fundo-produtos {
+    padding: 10px;
+    height: 420px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .produtos-index img {
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    margin: 0 auto;
+  }
+
+  .descricao-produtos {
+    height: 80px;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 1.3;
+    min-height: 80px;
+    text-align: center;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .preco-produtos {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .compra-produtos {
+    margin-top: auto; /* mantém todos alinhados */
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
   .beneficios-box {
     padding: 24px;
   }
@@ -566,12 +618,21 @@ nav a:hover {
   .header-menu a {
     font-size: 16px;
   }
+  .produtos-index {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 360px) {
+  .produtos-index {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Produtos */
 .produtos img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 220px;
   background-color: white;
   justify-content: center; /* centraliza */
   gap: 30px; /* espaço entre produtos */
@@ -591,10 +652,10 @@ nav a:hover {
 }
 
 .fundo-produtos {
-  background: #FFFFFF;
+  background: #ffffff;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* distribui melhor */
+  justify-content: flex-start;
   padding: 20px;
   width: 300px;
   height: 550px; /* todos terão a mesma altura */
@@ -622,21 +683,26 @@ nav a:hover {
   margin-top: 10px;
   text-align: center;
 }
+.compra-produtos {
+  margin-top: auto;
+}
 
 .compra-produtos {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100px;
-  margin: 15px auto 0 auto; 
-  background: linear-gradient(135deg, #002C66, #0A1C33);
+  margin: 15px auto 0 auto;
+  background: linear-gradient(135deg, #002c66, #0a1c33);
   color: var(--branco);
   padding: 8px 12px;
   border-radius: 4px;
   cursor: pointer;
   border: none;
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   box-shadow: 0 8px 20px rgba(10, 28, 51, 0.15);
 }
 
@@ -655,7 +721,7 @@ nav a:hover {
 .barra {
   padding: 8px;
   width: 300px;
-  background: linear-gradient(135deg, #002C66, #0A1C33);
+  background: linear-gradient(135deg, #002c66, #0a1c33);
   border: none;
   border-radius: 8px;
   color: white;
