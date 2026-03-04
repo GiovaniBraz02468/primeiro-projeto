@@ -15,7 +15,7 @@
 body {
   background: #CCE2FF;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* Navegação */
@@ -211,7 +211,6 @@ nav a:hover {
   text-align: center;
   color: #0A1C33;
   transition: 0.3s ease;
-  font-family: "Roboto", sans-serif;
   cursor: pointer;
 }
 
