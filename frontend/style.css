@@ -110,6 +110,10 @@ img {
   width: 100%;
 }
 
+nav a:hover {
+  color: #99C5FF;
+}
+
 /* Main */
 .container {
   max-width: 1200px;
@@ -119,7 +123,7 @@ img {
 
 /* Alterando a cor do INOVATECH */
 .text-titulo {
-  color: #0b4fa1;
+  color: #0d8aff;
 }
 
 .intro {
@@ -280,10 +284,6 @@ img {
   letter-spacing: -1px;
 } 
 
-.beneficios h2 span {
-  color: #5287CC;
-}
-
 .beneficios-lista {
   display: grid;
   grid-template-columns: 1fr;
@@ -367,43 +367,6 @@ img {
   margin: 40px;
 }
 
-.fundo {
-  background-color: rgb(207, 230, 230);
-  display: block;
-  padding: 20px;
-  width: 300px;
-  border-radius: 12px;
-  box-shadow: 0 8px 8px #7c8097;
-}
-
-.descricao {
-  color: rgb(73, 46, 46);
-  font-size: 15px;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.desconto {
-  text-decoration: line-through;
-  text-align: center;
-}
-
-.preço {
-  color: rgb(74, 253, 74);
-  font-size: 40px;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.compra {
-  display: block;
-  background-color: rgb(74, 253, 74);
-  color: var(--branco);
-  padding: 8px 12px;
-  margin: 10px auto; /* isso centraliza */
-  border-radius: 4px;
-  width: fit-content;
-}
 
 .dadoscad {
   margin-top: 10px;
@@ -521,7 +484,7 @@ img {
 
 /* Responsivo */
 @media (max-width: 1024px) {
-  .produtos {
+  .produtos-index {
     grid-template-columns: repeat(2, 1fr);
   }
   .header {
@@ -544,7 +507,7 @@ img {
   .intro p {
     font-size: 18px;
   }
-  .produtos {
+  .produtos-index {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
@@ -567,6 +530,7 @@ img {
     font-size: 16px;
   }
 }
+
 /* Produtos */
 .produtos img {
   width: 300px;
@@ -584,13 +548,13 @@ img {
   margin-top: 40px;
 }
 
-.fundo:hover {
+.fundo-produtos:hover {
   transform: scale(1.05); /* aumenta um pouco */
   transition: transform 0.3s ease; /* animação suave */
 }
 
-.fundo {
-  background-color: rgba(201, 247, 247, 0.301);
+.fundo-produtos {
+  background: #FFFFFF;
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* distribui melhor */
@@ -598,62 +562,76 @@ img {
   width: 300px;
   height: 550px; /* todos terão a mesma altura */
   border-radius: 12px;
-  box-shadow: 0 8px 8px #7c8097;
+  box-shadow: 0 12px 30px rgba(10, 28, 51, 0.12);
 }
 
-.descricao {
-  color: rgb(73, 46, 46);
+.descricao-produtos {
+  color: black;
   font-size: 15px;
   text-align: center;
-  min-height: 60px; /* força todas a ocupar mesmo espaço */
+  min-height: 90px;
+  margin-top: 20px;
 }
 
-.desconto {
+.desconto-produtos {
   text-decoration: line-through;
   text-align: center;
   color: rgb(151, 6, 6);
 }
 
-.preço {
-  color: rgb(74, 253, 74);
-  font-size: 40px;
+.preco-produtos {
+  color: rgb(9, 49, 110);
+  font-size: 20px;
   margin-top: 10px;
   text-align: center;
-  -webkit-text-stroke: rgb(12, 160, 20) 1px;
 }
 
-.compra {
-  display: block;
-  background-color: rgb(74, 253, 74);
+.compra-produtos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  margin: 15px auto 0 auto; 
+  background: linear-gradient(135deg, #002C66, #0A1C33);
   color: var(--branco);
   padding: 8px 12px;
-  margin-top: auto; /* ESSA LINHA EMPURRA PRA BAIXO */
-  margin-left: auto;
-  margin-right: auto;
   border-radius: 4px;
-  width: fit-content;
+  cursor: pointer;
+  border: none;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(10, 28, 51, 0.15);
+}
+
+.compra-produtos:hover {
+  transform: translateY(-4px) scale(1.05);
+  box-shadow: 0 15px 30px rgba(10, 28, 51, 0.25);
 }
 
 .btcompra {
   display: flex;
-  justify-content: center; /* Alinha o botão à direita */
-  padding: 20px;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
-.bt-compra {
-  background-color: rgb(74, 253, 74);
-  color: rgb(5, 90, 5);
-  padding: 12px 12px;
-  border-radius: 4px;
-  font-size: 24px;
-  font-family: Arial, Helvetica, sans-serif;
-  border: black 2px solid;
+.pesquisa {
+  padding: 8px;
+  width: 300px;
+  background: linear-gradient(135deg, #002C66, #0A1C33);
+  border: none;
+  border-radius: 8px;
+  color: white;
+}
+
+input::placeholder {
+  color: white;
 }
 
 .carrinho {
-  width: 75px;
-  height: 50px;
-  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
 }
 
 .texto {
@@ -670,11 +648,3 @@ img {
 }
 
 
-.pesquisa {
-  display: block;
-  margin: 20px auto; /* centraliza */
-  padding: 10px;
-  width: 300px;
-  border-radius: 4px;
-  border: 1px solid #ccc;
-}
