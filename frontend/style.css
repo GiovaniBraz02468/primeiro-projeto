@@ -646,14 +646,14 @@ nav a:hover {
   box-shadow: 0 15px 30px rgba(10, 28, 51, 0.25);
 }
 
-.btcompra {
+.topo {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
 
-.pesquisa {
+.barra {
   padding: 8px;
   width: 300px;
   background: linear-gradient(135deg, #002C66, #0A1C33);
@@ -662,7 +662,7 @@ nav a:hover {
   color: white;
 }
 
-.btcompra input::placeholder {
+.topo input::placeholder {
   color: white;
 }
 
