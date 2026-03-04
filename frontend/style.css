@@ -443,6 +443,7 @@ nav a:hover {
   cursor: pointer;
   border-radius: 15px;
   border: none;
+  font-family: "Roboto", sans-serif;
 }
 .contato {
   width: 90%;
