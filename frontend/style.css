@@ -1,7 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --branco: #ffffff;
+  --branco: #fff;
+  --preto: #000;
+  --background: #cce2ff;
+
+  --cor-principal: #002c66;
+  --cor-secundaria: #0a1c33;
+
+  --degrade: linear-gradient(135deg, #002c66, #0a1c33);
+
+  --text-hover: #99c5ff;
+
+  --cor-titulo: #0d8aff;
+
+  --cor-paragrafo: #1e293b;
+  --cor-p-card: rgb(9, 49, 110);
+
+  --cor-span-footer: #5287cc;
+
+  --cor-desconto: rgb(151, 6, 6);
 }
 
 /* Resetar o browser */
@@ -13,7 +31,7 @@
 
 /* Configurações do corpo do site */
 body {
-  background: #cce2ff;
+  background: var(--background);
   margin: 0;
   font-family: "Roboto", sans-serif;
 }
@@ -54,7 +72,7 @@ img {
 }
 
 .header-bg {
-  background: linear-gradient(135deg, #002c66, #0a1c33);
+  background: var(--degrade);
   border-radius: 16px;
   max-width: 1240px;
   margin: 20px auto;
@@ -110,7 +128,7 @@ img {
 }
 
 nav a:hover {
-  color: #99c5ff;
+  color: var(--text-hover);
 }
 
 /* Main */
@@ -122,7 +140,7 @@ nav a:hover {
 
 /* Alterando a cor do INOVATECH */
 .text-titulo {
-  color: #0d8aff;
+  color: var(--cor-titulo);
 }
 
 .intro {
@@ -134,7 +152,7 @@ nav a:hover {
   text-align: center;
   font-size: 48px;
   margin-bottom: 16px;
-  color: #0a1c33;
+  color: var(--cor-secundaria);
   font-weight: 700;
   letter-spacing: -1px;
 }
@@ -144,7 +162,7 @@ nav a:hover {
   font-size: 20px;
   line-height: 1.7;
   margin: 0 auto 32px;
-  color: #1e293b;
+  color: var(--cor-paragrafo);
 }
 
 .intro h2 {
@@ -154,14 +172,14 @@ nav a:hover {
   gap: 16px;
   font-size: 28px;
   margin-bottom: 40px;
-  color: #002c66;
+  color: var(--cor-principal);
   font-weight: 600;
 }
 
 .saiba-mais {
   font-size: 18px;
-  color: #ffffff;
-  background: linear-gradient(135deg, #002c66, #0a1c33);
+  color: var(--branco);
+  background: var(--degrade);
   padding: 10px 18px;
   border-radius: 8px;
   line-height: 1.5;
@@ -187,13 +205,13 @@ nav a:hover {
 .produtos-card-index h3 {
   font-size: 20px;
   margin-bottom: 5px;
-  color: black;
+  color: var(--preto);
 }
 
 .produtos-card-index p {
   font-size: 16px;
   margin-bottom: 5px;
-  color: rgb(9, 49, 110);
+  color: var(--cor-p-card);
 }
 
 /* Produtos index main */
@@ -206,11 +224,11 @@ nav a:hover {
 
 .produtos-card-index {
   padding: 24px;
-  background: #ffffff;
+  background: var(--branco);
   border-radius: 16px;
   box-shadow: 0 12px 30px rgba(10, 28, 51, 0.12);
   text-align: center;
-  color: #0a1c33;
+  color: var(--cor-secundaria);
   transition: 0.3s ease;
   cursor: pointer;
 }
@@ -229,7 +247,6 @@ nav a:hover {
 }
 
 .produtos-card-index:hover .preco {
-  color: rgb(255, 255, 255);
   font-size: 20px;
 }
 
@@ -244,22 +261,17 @@ nav a:hover {
   display: inline-block;
   font-size: 18px;
   font-weight: 700;
-  color: #e4e6eb;
-  background: linear-gradient(135deg, #002c66, #0a1c33);
+  color: var(--branco);
+  background: var(--degrade);
   padding: 8px 10px;
   border-radius: 4px;
   margin-top: 5px;
   transition: 0.3s ease;
 }
 
-.produtos-card-index:hover .preco {
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-}
-
 /* Beneficios index */
 .beneficios {
-  background: linear-gradient(145deg, #002c66, #0a1c33);
+  background: var(--degrade);
   margin: 100px auto;
   text-align: center;
   border-radius: 24px;
@@ -280,7 +292,7 @@ nav a:hover {
 .beneficios h2 {
   font-size: 38px;
   margin-bottom: 40px;
-  color: #ffffff;
+  color: var(--branco);
   font-weight: 700;
   letter-spacing: -1px;
 }
@@ -297,7 +309,7 @@ nav a:hover {
 .beneficios-lista li {
   list-style: none;
   font-size: 18px;
-  color: #e2e8f0;
+  color: var(--branco);
   position: relative;
   padding-left: 30px;
 }
@@ -306,13 +318,13 @@ nav a:hover {
   content: "✔";
   position: absolute;
   left: 0;
-  color: #99c5ff;
+  color: var(--text-hover);
   font-weight: bold;
 }
 
 /* Footer index*/
 .footer {
-  background: linear-gradient(135deg, #002c66, #0a1c33);
+  background: var(--degrade);
   color: var(--branco);
   padding: 40px 20px;
   text-align: center;
@@ -325,7 +337,7 @@ nav a:hover {
 
 .footer a {
   text-decoration: none;
-  color: #99c5ff;
+  color: var(--text-hover);
   font-weight: 500;
   position: relative;
   transition: color 0.3s ease;
@@ -338,12 +350,12 @@ nav a:hover {
   bottom: -3px;
   width: 0%;
   height: 2px;
-  background: #5287cc;
+  background: var(--cor-span-footer);
   transition: width 0.3s ease;
 }
 
 .footer a:hover {
-  color: #ffffff;
+  color: var(--branco);
 }
 
 .footer a:hover::after {
@@ -384,21 +396,8 @@ nav a:hover {
   margin-top: -225px;
 }
 
-.botao {
-  background-color: #007bff;
-  color: white;
-  padding: 8px 20px;
-  text-decoration: none;
-  border-radius: 8px;
-  display: inline-block;
-}
-
-.botao:hover {
-  background-color: #0056b3;
-}
-
 .contato {
-  background: linear-gradient(135deg, #002c66, #0a1c33, #00aeff);
+  background: var(--degrade);
   display: block;
   padding: 40px;
   width: 500px;
@@ -406,13 +405,15 @@ nav a:hover {
   box-shadow: 0 8px 8px #7c8097;
   margin: 60px auto; /* centraliza */
 }
+
 .contato h2 {
   font-size: 32px;
   margin-bottom: 20px;
-  color: rgb(255, 255, 255);
+  color: var(--branco);
   font-size: 20px;
   border-radius: 15px;
 }
+
 .contato input,
 .contato textarea {
   width: 100%;
@@ -422,6 +423,7 @@ nav a:hover {
   border-radius: 15px;
   border: none;
 }
+
 .contato button {
   padding: 12px 20px;
   font-size: 16px;
@@ -429,17 +431,19 @@ nav a:hover {
   border-radius: 15px;
   border: none;
 }
+
 .contato {
   width: 90%;
   max-width: 600px;
   padding: 40px;
   margin: 60px auto;
 }
+
 .info-contato {
   max-width: 600px;
   margin: 40px auto;
   padding: 25px;
-  color: rgb(0, 0, 0);
+  color: var(--preto);
   border-radius: 15px;
   text-align: center;
 }
@@ -460,48 +464,13 @@ nav a:hover {
 .redes a {
   margin: 0 10px;
   text-decoration: none;
-  color: rgb(0, 0, 0);
+  color: var(--preto);
   font-weight: bold;
   transition: 0.3s;
 }
 
 .redes a:hover {
-  color: #ffd700;
-}
-
-.info-contato {
-  max-width: 600px;
-  margin: 40px auto;
-  padding: 25px;
-  color: rgb(0, 0, 0);
-  border-radius: 15px;
-  text-shadow: #ffffff 1px 1px 2px;
-  text-align: center;
-}
-
-.info-contato h3 {
-  margin-bottom: 20px;
-}
-
-.info-contato p {
-  margin: 10px 0;
-  font-size: 16px;
-}
-
-.redes {
-  margin-top: 20px;
-}
-
-.redes a {
-  margin: 0 10px;
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.redes a:hover {
-  color: #ffd700;
+  color: var(--cor-titulo);
 }
 
 /* Responsivo */
@@ -617,7 +586,7 @@ nav a:hover {
 .produtos img {
   width: 100%;
   height: 220px;
-  background-color: white;
+  background-color: var(--branco);
   justify-content: center; /* centraliza */
   gap: 30px; /* espaço entre produtos */
   flex-wrap: wrap; /* quebra linha se não couber */
@@ -636,7 +605,7 @@ nav a:hover {
 }
 
 .fundo-produtos {
-  background: #ffffff;
+  background: var(--branco);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -648,7 +617,7 @@ nav a:hover {
 }
 
 .descricao-produtos {
-  color: black;
+  color: var(--preto);
   font-size: 15px;
   text-align: center;
   min-height: 90px;
@@ -658,11 +627,11 @@ nav a:hover {
 .desconto-produtos {
   text-decoration: line-through;
   text-align: center;
-  color: rgb(151, 6, 6);
+  color: var(--cor-desconto)
 }
 
 .preco-produtos {
-  color: rgb(9, 49, 110);
+  color: var(--cor-p-card);
   font-size: 20px;
   margin-top: 10px;
   text-align: center;
@@ -677,7 +646,7 @@ nav a:hover {
   align-items: center;
   width: 100px;
   margin: 15px auto 0 auto;
-  background: linear-gradient(135deg, #002c66, #0a1c33);
+  background: var(--degrade);
   color: var(--branco);
   padding: 8px 12px;
   border-radius: 4px;
@@ -705,33 +674,20 @@ nav a:hover {
 .barra {
   padding: 8px;
   width: 300px;
-  background: linear-gradient(135deg, #002c66, #0a1c33);
+  background: var(--degrade);
   border: none;
   border-radius: 8px;
-  color: white;
+  color: var(--branco);
 }
 
 .topo input::placeholder {
-  color: white;
+  color: var(--branco);
 }
 
 .carrinho {
   height: 40px;
   width: 40px;
   cursor: pointer;
-}
-
-.texto {
-  color: rgb(73, 46, 46);
-  font-size: 50px;
-  margin-top: 10px;
-  text-align: center;
-  background-color: white;
-  padding: 10px;
-  border-radius: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .sobre-container {
@@ -747,7 +703,7 @@ nav a:hover {
 }
 
 .info-box {
-  background-color: white;
+  background-color: var(--branco);
   padding: 15px 20px;
   border-radius: 8px;
   margin-bottom: 15px;
@@ -756,7 +712,7 @@ nav a:hover {
 
 .info-box h3 {
   margin-bottom: 10px;
-  color: #0a3d62;
+  color: var(--cor-principal);
 }
 
 .sobre-imagem {
@@ -770,8 +726,4 @@ nav a:hover {
   border-radius: 12px;
   margin-top: 548px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
-}
-
-.botao:hover {
-  background-color: #0056b3;
 }
