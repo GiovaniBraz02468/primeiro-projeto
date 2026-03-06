@@ -364,8 +364,9 @@ nav a:hover {
 
 /* Produtos */
 .produtos img {
-  width: 300px;
-  height: 300px;
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
   justify-content: center; /* centraliza */
   gap: 30px; /* espaço entre produtos */
   flex-wrap: wrap; /* quebra linha se não couber */
@@ -374,10 +375,11 @@ nav a:hover {
 
 .produtos {
   display: flex;
-  justify-content: center; /* centraliza */
-  gap: 30px; /* espaço entre produtos */
   flex-wrap: wrap;
-  margin: 40px;
+  justify-content: center;
+  gap: 30px;
+  margin: 40px auto;
+  max-width: 1200px;
 }
 
 .Horarios {
@@ -587,9 +589,9 @@ nav a:hover {
   width: 100%;
   height: 220px;
   background-color: var(--branco);
-  justify-content: center; /* centraliza */
-  gap: 30px; /* espaço entre produtos */
-  flex-wrap: wrap; /* quebra linha se não couber */
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap; 
   margin-top: 30px;
   border-radius: 30px;
 }
@@ -608,10 +610,10 @@ nav a:hover {
   background: var(--branco);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   padding: 20px;
-  width: 300px;
-  height: 550px; /* todos terão a mesma altura */
+  width: 100%;
+  max-width: 280px;
+  height: auto;
   border-radius: 12px;
   box-shadow: 0 12px 30px rgba(10, 28, 51, 0.12);
 }
@@ -726,4 +728,19 @@ nav a:hover {
   border-radius: 12px;
   margin-top: 548px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+
+  .produtos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 10px;
+  }
+
+  .fundo-produtos {
+    max-width: 100%;
+  }
+
 }
